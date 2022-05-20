@@ -1,3 +1,5 @@
+package application;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -198,7 +200,7 @@ public class GestionJeu {
 	
 	/**
 	 * remplace le dictionnaire actuel avec les mots qui se trouvent dans le fichier donné
-	 * @param nomFichierDico : nom du noueu dictionnaire
+	 * @param nomFichierDico : nom du noueud dictionnaire
 	 * @throws IOException
 	 */
 	public void ChangerDico(String nomFichierDico) throws IOException
@@ -225,7 +227,7 @@ public class GestionJeu {
 		ChoixMotMystere();
 		this.nbLettresTrouvees = 0;
 		this.nbErreurs = 0;
-		this.lettresDejaDonnees = "";
+		this.lettresDejaDonnees = "";  
 	}
 	
 	///////////////////////////////////////////////////////////////////////////////////////////////
