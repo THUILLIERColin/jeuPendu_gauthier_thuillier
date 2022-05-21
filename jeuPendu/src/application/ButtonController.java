@@ -22,6 +22,7 @@ public class ButtonController {
 	
 	@FXML Button lancer;
 	@FXML Button quitter;
+	@FXML Button acceuille;
 	
  @FXML public void initialize() {}
 	 
@@ -37,19 +38,29 @@ public class ButtonController {
 	
 
 	public void lancerPartie(ActionEvent event) throws IOException {
-		System.out.println(""+getGestionJeu());
 		jeu.InitialiserPartie();
-		
-		root = FXMLLoader.load(getClass().getResource("enJeu.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("enJeu.fxml"));
+		enJeuController enJeu = new enJeuController(jeu);
+		loader.setController(enJeu);
+		root = loader.load();
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
-		stage.show();
 	}
 	
 	public void quitterPartie(ActionEvent event) throws IOException {
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		stage.close();
+	}
+	
+	public void acceuille(ActionEvent event) throws IOException {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("introduction.fxml"));
+		IntroductionController intro = new IntroductionController(jeu);
+		
+		root = loader.load();
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
 	}
 
 }

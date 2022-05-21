@@ -15,7 +15,7 @@ public class Main extends Application {
 	@Override 
 	public void init(){
 		try {
-			this.jeu = new GestionJeu(""+getClass().getResource("Dico.txt"));
+			this.jeu = new GestionJeu("Dictionnaires/Dico.txt");
 		}
 		catch(Exception e) {
 			System.err.print(e);
