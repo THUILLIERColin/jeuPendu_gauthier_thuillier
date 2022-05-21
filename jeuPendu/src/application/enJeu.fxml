@@ -9,5 +9,6 @@
       <Button layoutX="82.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="A" />
       <Label layoutX="120.0" layoutY="169.0" text="Mot mystere" />
       <Button layoutX="120.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="B" />
+      <Button fx:id="fin" layoutX="402.0" layoutY="75.0" mnemonicParsing="false" onAction="#troisEcran" text="Button" />
    </children>
 </Pane>

@@ -20,8 +20,14 @@ public class ButtonController {
 	
 	private GestionJeu jeu;
 	
+	
+	@FXML Button fin;
+	@FXML Button reco;
 	@FXML Button lancer;
 	@FXML Button quitter;
+	@FXML Button quitter2;
+	
+	@FXML Button acceuille2;
 	@FXML Button acceuille;
 	
  @FXML public void initialize() {}
@@ -47,6 +53,9 @@ public class ButtonController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 	}
+	public void recommencerPartie(ActionEvent event) throws IOException {
+		lancerPartie(event);
+	}
 	
 	public void quitterPartie(ActionEvent event) throws IOException {
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -56,7 +65,17 @@ public class ButtonController {
 	public void acceuille(ActionEvent event) throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("introduction.fxml"));
 		IntroductionController intro = new IntroductionController(jeu);
-		
+		loader.setController(intro);
+		root = loader.load();
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+	}
+	
+	public void troisEcran(ActionEvent event) throws IOException {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("fin.fxml"));
+		finController fin = new finController(jeu);
+		loader.setController(fin);
 		root = loader.load();
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
