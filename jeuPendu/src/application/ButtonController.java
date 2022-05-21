@@ -19,6 +19,7 @@ public class ButtonController {
 	private Pane root;
 	
 	private GestionJeu jeu;
+	private GestionOption option;
 	
 	@FXML Button lancer;
 	@FXML Button quitter;
@@ -26,12 +27,11 @@ public class ButtonController {
 	
  @FXML public void initialize() {}
 	 
-	 public ButtonController() {
-		 
-	 }
+	 public ButtonController() {}
 	 
-	public ButtonController(GestionJeu jeu) {
+	public ButtonController(GestionJeu jeu, GestionOption option) {
 		this.jeu=jeu;
+		this.option= option;
 	}
 	
 	public GestionJeu getGestionJeu() { return jeu;}
@@ -40,8 +40,9 @@ public class ButtonController {
 	public void lancerPartie(ActionEvent event) throws IOException {
 		jeu.InitialiserPartie();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("enJeu.fxml"));
-		enJeuController enJeu = new enJeuController(jeu);
+		enJeuController enJeu = new enJeuController(jeu,option);
 		loader.setController(enJeu);
+		
 		root = loader.load();
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
@@ -51,11 +52,13 @@ public class ButtonController {
 	public void quitterPartie(ActionEvent event) throws IOException {
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		stage.close();
+		System.exit(0);
 	}
 	
-	public void acceuille(ActionEvent event) throws IOException {
+	public void acceuil(ActionEvent event) throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("introduction.fxml"));
-		IntroductionController intro = new IntroductionController(jeu);
+		IntroductionController intro = new IntroductionController(jeu,option);
+		loader.setController(intro);
 		
 		root = loader.load();
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();

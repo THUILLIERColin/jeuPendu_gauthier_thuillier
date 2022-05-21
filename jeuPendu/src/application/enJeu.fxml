@@ -9,5 +9,8 @@
       <Button layoutX="82.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="A" />
       <Label layoutX="120.0" layoutY="169.0" text="Mot mystere" />
       <Button layoutX="120.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="B" />
+      <Button fx:id="quitter" layoutX="143.0" layoutY="14.0" mnemonicParsing="false" onAction="#quitterPartie" text="Quitter" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#lancerPartie" text="Ralancer" />
+      <Button layoutX="82.0" layoutY="14.0" mnemonicParsing="false" onAction="#acceuil" text="Acceuil" />
    </children>
 </Pane>

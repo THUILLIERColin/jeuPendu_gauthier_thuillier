@@ -1,8 +1,6 @@
 package application;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 
 
 
@@ -88,8 +86,8 @@ public class enJeuController extends ButtonController{
 	
 	
 	
-	public enJeuController(GestionJeu jeu) {
-		super(jeu);
+	public enJeuController(GestionJeu jeu, GestionOption option) {
+		super(jeu, option);
 	}
 	
 	public void handleButtonKeybord(ActionEvent event) {

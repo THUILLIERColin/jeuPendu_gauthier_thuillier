@@ -5,12 +5,7 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
+import javafx.scene.control.Alert;
 
 public class IntroductionController extends ButtonController {
 	
@@ -21,9 +16,14 @@ public class IntroductionController extends ButtonController {
 		
 	}
 	 
-	public IntroductionController(GestionJeu jeu) {
-		super(jeu);
+	public IntroductionController(GestionJeu jeu, GestionOption option) {
+		super(jeu, option);
 	}
 	
+	public void ouvrirSupport(ActionEvent event) throws IOException {
+		Alert dialogueSupport = new Alert(Alert.AlertType.INFORMATION);
+		dialogueSupport.show();
+	}
+		
 
 }
