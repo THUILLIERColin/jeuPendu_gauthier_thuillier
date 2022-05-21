@@ -1,29 +1,41 @@
 package application;
 	
+import java.io.IOException;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 
 
 public class Main extends Application {
+	
+	private GestionJeu jeu;
+	
 	@Override 
-	public void init() {
-		
-	}
-	 
-	@Override
-	public void start(Stage primaryStage) {
+	public void init(){
 		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,1300,700);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
+			this.jeu = new GestionJeu(""+getClass().getResource("Dico.txt"));
+		}
+		catch(Exception e) {
+			System.err.print(e);
 		}
 	}
+	
+	@Override
+	 public void start(Stage stage) {
+	  try {
+		  FXMLLoader loader = new FXMLLoader(getClass().getResource("introduction.fxml"));
+		  IntroductionController intro= new IntroductionController(jeu);
+		  loader.setController(intro);
+		  Pane root = loader.load();
+		  Scene scene = new Scene(root,1300,700);
+		  stage.setScene(scene);
+		  stage.show();
+	  } catch(Exception e) {
+	   e.printStackTrace();
+	  }
+	 } 
 	
 	public static void main(String[] args) {
 		launch(args);
