@@ -1,4 +1,12 @@
-#stack-pane{
-    -fx-background-image: url("/images/ecran1BG") ;
-  
+.bodybg3{
+    -fx-background-image: url("../images/woody.jpg") ;
+     -fx-background-size: 100% 100%;
+}
+.bodybg2{
+    -fx-background-image: url("../images/farwest.jpg") ;
+     -fx-background-size: 100% 100%;
+}
+.bodybg1{
+    -fx-background-image: url("../images/ecran1BG.jpg") ;
+     -fx-background-size: 100% 100%;
 }
