@@ -35,8 +35,10 @@ public class IntroductionController extends ButtonController {
         dialog.setTitle("Support");
         dialog.getDialogPane().setContent(support);
         
-        ButtonType buttonFermer = new ButtonType("X", ButtonData.OK_DONE);
+        ButtonType buttonFermer = new ButtonType("Fermer", ButtonData.FINISH);
 		dialog.getDialogPane().getButtonTypes().addAll(buttonFermer);
+		
+		dialog.show();
 		
 	}
 		
