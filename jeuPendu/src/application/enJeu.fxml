@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -8,83 +9,119 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg2" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" styleClass="bodybg2" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="101.0" layoutX="10.0" layoutY="44.0" opacity="0.54" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="437.0" />
-      <Button fx:id="a" layoutX="63.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="A" />
-      <Button fx:id="b" layoutX="97.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="B" />
-      <ImageView fx:id="corde" fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/corde.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="tete" fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/tete.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="corp" fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/Corps.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="bras1" fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/brasG.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="jambe1" fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/jambeG.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="jambe2" fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/jambeD.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="bras2" fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/brasD.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="c" layoutX="125.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="C" />
-      <Button fx:id="d" layoutX="159.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="D" />
-      <Button fx:id="e" layoutX="187.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="E" />
-      <Button fx:id="f" layoutX="221.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="F" />
-      <Button fx:id="g" layoutX="251.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="G" />
-      <Button fx:id="h" layoutX="281.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="H" />
-      <Button fx:id="i" layoutX="46.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="I" />
-      <Button fx:id="j" layoutX="80.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="J" />
-      <Button fx:id="k" layoutX="108.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="K" />
-      <Button fx:id="l" layoutX="142.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="L" />
-      <Button fx:id="m" layoutX="170.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="M" />
-      <Button fx:id="n" layoutX="204.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="N" />
-      <Button fx:id="o" layoutX="238.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="O" />
-      <Button fx:id="p" layoutX="282.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="P" />
-      <Button fx:id="q" layoutX="310.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Q" />
-      <Button fx:id="r" layoutX="69.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="R" />
-      <Button fx:id="s" layoutX="103.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="S" />
-      <Button fx:id="t" layoutX="137.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="T" />
-      <Button fx:id="u" layoutX="170.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="U" />
-      <Button fx:id="v" layoutX="204.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="V" />
-      <Button fx:id="w" layoutX="236.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="W" />
-      <Button layoutX="270.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="X" fx:id="x" />
-      <Button fx:id="y" layoutX="300.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Y" />
-      <Button fx:id="z" layoutX="334.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Z" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="33.0" layoutX="396.0" layoutY="306.0" stroke="BLACK" strokeType="INSIDE" width="187.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="207.0" layoutX="551.0" layoutY="104.0" stroke="BLACK" strokeType="INSIDE" width="19.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="16.0" layoutX="465.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" width="118.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="63.0" layoutX="47.0" layoutY="176.0" opacity="0.54" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="339.0" />
-      <Label fx:id="mot" alignment="TOP_CENTER" ellipsisString="" layoutX="49.0" layoutY="176.0" prefHeight="63.0" prefWidth="333.0" textAlignment="CENTER" wrapText="true">
-         <font>
-            <Font name="Agency FB Bold" size="38.0" />
-         </font>
-      </Label>
-      <Label fx:id="info" layoutX="11.0" layoutY="46.0" prefHeight="101.0" prefWidth="437.0" wrapText="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="101.0" layoutX="282.0" layoutY="118.0" opacity="0.54" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="437.0" />
+      <Label fx:id="info" layoutX="283.0" layoutY="120.0" prefHeight="101.0" prefWidth="437.0" wrapText="true">
          <font>
             <Font name="Agency FB Bold" size="27.0" />
          </font>
       </Label>
+      <Button fx:id="a" layoutX="374.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="A" />
+      <Button fx:id="b" layoutX="403.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="B" />
+      <ImageView fx:id="corde" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/corde.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tete" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/tete.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="corp" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Corps.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bras1" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/brasG.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="jambe1" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/jambeG.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="jambe2" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/jambeD.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bras2" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/brasD.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="c" layoutX="436.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="C" />
+      <Button fx:id="d" layoutX="462.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="D" />
+      <Button fx:id="e" layoutX="498.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="E" />
+      <Button fx:id="f" layoutX="527.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="F" />
+      <Button fx:id="g" layoutX="562.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="G" />
+      <Button fx:id="h" layoutX="592.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="H" />
+      <Button fx:id="i" layoutX="357.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="I" />
+      <Button fx:id="j" layoutX="391.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="J" />
+      <Button fx:id="k" layoutX="419.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="K" />
+      <Button fx:id="l" layoutX="453.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="L" />
+      <Button fx:id="m" layoutX="481.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="M" />
+      <Button fx:id="n" layoutX="515.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="N" />
+      <Button fx:id="o" layoutX="549.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="O" />
+      <Button fx:id="p" layoutX="593.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="P" />
+      <Button fx:id="q" layoutX="621.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Q" />
+      <Button fx:id="r" layoutX="380.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="R" />
+      <Button fx:id="s" layoutX="414.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="S" />
+      <Button fx:id="t" layoutX="448.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="T" />
+      <Button fx:id="u" layoutX="481.0" layoutY="484.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="U" />
+      <Button fx:id="v" layoutX="515.0" layoutY="484.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="V" />
+      <Button fx:id="w" layoutX="547.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="W" />
+      <Button layoutX="581.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="X" fx:id="x" />
+      <Button fx:id="y" layoutX="611.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Y" />
+      <Button fx:id="z" layoutX="645.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Z" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="33.0" layoutX="974.0" layoutY="383.0" stroke="BLACK" strokeType="INSIDE" width="187.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="207.0" layoutX="1129.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="19.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="16.0" layoutX="1043.0" layoutY="171.0" stroke="BLACK" strokeType="INSIDE" width="118.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="63.0" layoutX="357.0" layoutY="274.0" opacity="0.54" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="339.0" />
+      <Label fx:id="mot" alignment="TOP_CENTER" ellipsisString="" layoutX="359.0" layoutY="274.0" prefHeight="63.0" prefWidth="333.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Agency FB Bold" size="38.0" />
+         </font>
+      </Label>
+      <Button fx:id="lancerEnJeu" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="134.0" layoutY="17.0" maxHeight="52.0" maxWidth="136.0" minHeight="33.0" minWidth="40.0" mnemonicParsing="false" onAction="#recommencerPartie" prefHeight="33.0" prefWidth="40.0">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" cache="true" cacheHint="QUALITY" fitHeight="36.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/lancerRaccourci.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Button>
+      <Button fx:id="acceuilEnJeu" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="76.0" layoutY="17.0" maxHeight="52.0" maxWidth="136.0" minHeight="33.0" minWidth="40.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="40.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <graphic>
+            <ImageView accessibleRole="BUTTON" cache="true" cacheHint="QUALITY" fitHeight="34.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/AcceuilRaccourci.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="quitterEnJeu" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="195.0" layoutY="17.0" maxHeight="52.0" maxWidth="136.0" minHeight="33.0" minWidth="40.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="40.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <graphic>
+            <ImageView accessibleRole="BUTTON" cache="true" cacheHint="QUALITY" fitHeight="32.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/quitRaccourci.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </Pane>

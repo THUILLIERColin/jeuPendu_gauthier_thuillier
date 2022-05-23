@@ -5,12 +5,15 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Dialog;
+import javafx.scene.layout.AnchorPane;
 
 public class IntroductionController extends ButtonController {
 	
 	 
-	 @FXML public void initialize() {}
+	@FXML public void initialize() {}
 	 
 	public IntroductionController() {
 		
@@ -20,9 +23,21 @@ public class IntroductionController extends ButtonController {
 		super(jeu, option);
 	}
 	
+	@FXML
 	public void ouvrirSupport(ActionEvent event) throws IOException {
-		Alert dialogueSupport = new Alert(Alert.AlertType.INFORMATION);
-		dialogueSupport.show();
+		
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("support.fxml"));
+        optionController optionController = new optionController();
+        loader.setController(optionController);
+        AnchorPane support = loader.load();
+	
+        Dialog<ButtonType> dialog = new Dialog<>();
+        dialog.setTitle("Support");
+        dialog.getDialogPane().setContent(support);
+        
+        ButtonType buttonFermer = new ButtonType("X", ButtonData.OK_DONE);
+		dialog.getDialogPane().getButtonTypes().addAll(buttonFermer);
+		
 	}
 		
 

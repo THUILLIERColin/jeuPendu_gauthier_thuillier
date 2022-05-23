@@ -1,28 +1,16 @@
 package application;
 
-import java.awt.Color;
-import java.awt.Paint;
 import java.io.IOException;
 import java.util.Vector;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
-
-
 
 /*
- * import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Vector;
-
 public class Jeu {
 
 	public static void main(String[] args) throws IOException {
@@ -32,15 +20,15 @@ public class Jeu {
 		   //pour indiquer la fin du jeu
 		   boolean quitterJeu;
 
-		   //réponse du joueur 
+		   //rï¿½ponse du joueur 
 		   String reponse;
     		   
-		   //positions où se trouve le caractère proposé par le joueur dans le mot à deviner
+		   //positions oï¿½ se trouve le caractï¿½re proposï¿½ par le joueur dans le mot ï¿½ deviner
 		   Vector<Integer> pos; 
 	
-		   //pour gérer le jeu
+		   //pour gï¿½rer le jeu
 		   GestionJeu jeu = new GestionJeu(Jeu.class.getResource("Dico.txt").getFile());
-	   //  GestionJeu jeu = new GestionJeu(getClass().getResource("/Dico.txt").getFile();... si on avait été dans une méthode d'instance
+	   //  GestionJeu jeu = new GestionJeu(getClass().getResource("/Dico.txt").getFile();... si on avait ï¿½tï¿½ dans une mï¿½thode d'instance
 		   
 		   
 		   quitterJeu = false;
@@ -51,13 +39,13 @@ public class Jeu {
 		       do
 		       {
 		    	   do
-		           {//on saisit la lettre proposée par le joueur
+		           {//on saisit la lettre proposï¿½e par le joueur
 		    		   System.out.println("Votre lettre : ");
 		               BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		               reponse = in.readLine().toUpperCase();
 		           } while (!(jeu.CaractereAutorise(reponse) && (jeu.getLettresDejaDonnees().indexOf(reponse.charAt(0))==-1)));
 						
-		    	   //la lettre choisie est mémorisée pour éviter que le joueur ne la redonne par la suite
+		    	   //la lettre choisie est mï¿½morisï¿½e pour ï¿½viter que le joueur ne la redonne par la suite
 		    	   jeu.MemoriserLettreChoisie(reponse.charAt(0));
 	                
 		    	   pos = new Vector<Integer>();
@@ -65,7 +53,7 @@ public class Jeu {
 		           {	//la lettre n'est pas dans le mot, une erreur de plus
 		                jeu.MAJNbErreurs();
 		                if (jeu.MaxErreursDepasse())
-		                {//le joueur a dépassé le nombre masimum d'erreurs autorisé...il perd
+		                {//le joueur a dï¿½passï¿½ le nombre masimum d'erreurs autorisï¿½...il perd
 		                	finJeu = true;
 		                    System.out.println("Vous perdez. Il fallait trouver "+jeu.getMotMystere()+" !!!");
 		                }
@@ -73,9 +61,9 @@ public class Jeu {
 		                	System.out.println("Nb d'erreurs: " + jeu.getNbErreurs());
 		           }
 		           else
-		           {	//la lettre est dans le mot à toutes les positions indiquées dans pos
+		           {	//la lettre est dans le mot ï¿½ toutes les positions indiquï¿½es dans pos
 		        	   	if (jeu.ToutTrouve()) 
-		                {	//toutes les lettres ont été trouvées
+		                {	//toutes les lettres ont ï¿½tï¿½ trouvï¿½es
 		                    finJeu = true;
 		                    System.out.println("Vous gagnez!!!");
 		                }
@@ -179,13 +167,13 @@ public class enJeuController extends ButtonController{
 	
 	public void erreur() {
 		switch(jeu.getNbErreurs()) {
-		case 1: corde.setVisible(true); 
-		break;
-		case 2: tete.setVisible(true);
-		break;
-		case 3: corp.setVisible(true);
-		break;
-		case 4: jambe1.setVisible(true);
+			case 1: corde.setVisible(true); break;
+			case 2: tete.setVisible(true); break;
+			case 3: corp.setVisible(true); break;
+			case 4: jambe1.setVisible(true); break;
+			case 5 : jambe2.setVisible(true); break;
+			case 6 : bras1.setVisible(true); break;
+			case 7 : bras2.setVisible(true); break;
 		}
 	}
 	
@@ -195,8 +183,8 @@ public class enJeuController extends ButtonController{
 	
 	public void handleButtonKeybord(ActionEvent event) {
 		
-	    String lettre =    ((Button) event.getSource()).getId().toUpperCase();
-	       System.out.print(lettre);
+	    String lettre =((Button) event.getSource()).getId().toUpperCase();
+	       // System.out.print(lettre);
 	        	
 	        	 if(!jeu.getMotMystere().contains(lettre)) {
 	                 if(jeu.getLettresDejaDonnees().contains(lettre))
@@ -212,7 +200,7 @@ public class enJeuController extends ButtonController{
 	        	 }
 	        	 else {
 	        		 if(jeu.getLettresDejaDonnees().contains(lettre)) {
-	        				                 	info.setText("Tu as déjà essayé pied tendre!");
+	        				                 	info.setText("Tu as dï¿½jï¿½ essayï¿½ pied tendre!");
 	        		 }
 		                 else {
 		                 	jeu.setLettresDejaDonnees(lettre+ jeu.getLettresDejaDonnees());
@@ -224,7 +212,7 @@ public class enJeuController extends ButtonController{
 	        	 }
 	        if(jeu.MaxErreursDepasse()||jeu.ToutTrouve()){
 	        	try {
-					troisEcran(event);
+					fin(event);
 				} catch (IOException e) {
 			
 					e.printStackTrace();

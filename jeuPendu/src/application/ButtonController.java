@@ -58,7 +58,8 @@ public class ButtonController {
 		loader.setController(enJeu);
 		root = loader.load();
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		scene = new Scene(root);
+		scene = new Scene(root,1300,700);
+		stage.setTitle("Voici le jeu du pendu");
 		stage.setScene(scene);
 	}
 	public void recommencerPartie(ActionEvent event) throws IOException {
@@ -76,17 +77,19 @@ public class ButtonController {
 		loader.setController(intro);
 		root = loader.load();
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		scene = new Scene(root);
+		scene = new Scene(root,1300,700);
+		stage.setTitle("Introduction");
 		stage.setScene(scene);
 	}
 	
-	public void troisEcran(ActionEvent event) throws IOException {
+	public void fin(ActionEvent event) throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("fin.fxml"));
-		finController fin = new finController(jeu);
+		finController fin = new finController(jeu,option);
 		loader.setController(fin);
 		root = loader.load();
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		scene = new Scene(root);
+		scene = new Scene(root,1300,700);
+		stage.setTitle("Fin du jeu");
 		stage.setScene(scene);
 	}
 

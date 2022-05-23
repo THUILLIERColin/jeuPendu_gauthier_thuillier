@@ -32,6 +32,7 @@ public class Main extends Application {
 		  loader.setController(intro);
 		  Pane root = loader.load();
 		  Scene scene = new Scene(root,1300,700);
+		  stage.setTitle("Intoduction");
 		  stage.setScene(scene);
 		  stage.show();
 	  } catch(Exception e) {

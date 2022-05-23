@@ -1,8 +1,5 @@
 package application;
 
-import java.io.IOException;
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,25 +10,28 @@ import javafx.stage.Stage;
 
 
 public class finController extends ButtonController{
+	
 	GestionJeu jeu = getJeu();
-	private String MM = jeu.getMotMystere();
-	@FXML Label L1;
-	@FXML Label L2;
+	private String motMystere = jeu.getMotMystere();
+	@FXML Label labelMotMystere;
+	@FXML Label labelMessageFin;
+	
+	
 	@FXML public void initialize() {
 	
-		L1.setText(MM);
+		labelMotMystere.setText(motMystere);
 		if(jeu.MaxErreursDepasse())
-			L2.setText("Aie aie cowboy tu as perdu..");
+			labelMessageFin.setText("Aie aie cowboy tu as perdu..");
 		else
-			L2.setText("Bravo cowboy tu as gagné");
+			labelMessageFin.setText("Bravo cowboy tu as gagné");
 
 	}
 	public finController() {
 		
 	}
 	
-	public finController(GestionJeu jeu) {
-		super(jeu);
+	public finController(GestionJeu jeu, GestionOption option) {
+		super(jeu,option);
 	}
 	
 }
