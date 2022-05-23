@@ -135,20 +135,28 @@ public class enJeuController extends ButtonController{
 	
 	@FXML
 	public String addLettreUnderscore(String car) {
+		
 		String newMot = "";
 		String ancienMot = mot.getText();
-		System.out.print(ancienMot);
 		char cara = car.charAt(0); 
 		pos.removeAllElements();
 		
 		int nb = jeu.ChercherLettreDansMot(cara, pos);
-		for(int j = 0;j<nb;j++) {
+		
 		for(int i = 0;i<jeu.getMotMystere().length();i++) {
-			if(pos.indexOf(i)==0)
+			if(pos.indexOf(i)!=-1) {
 				newMot = newMot + car ;
-			else 
+
+			}
+			else {
 				newMot = newMot + ancienMot.charAt(i); 
-		}}
+
+			}
+		}
+		
+		
+		
+		
 		return newMot;
 		
 	}
@@ -184,7 +192,6 @@ public class enJeuController extends ButtonController{
 	public void handleButtonKeybord(ActionEvent event) {
 		
 	    String lettre =((Button) event.getSource()).getId().toUpperCase();
-	       // System.out.print(lettre);
 	        	
 	        	 if(!jeu.getMotMystere().contains(lettre)) {
 	                 if(jeu.getLettresDejaDonnees().contains(lettre))
@@ -200,24 +207,24 @@ public class enJeuController extends ButtonController{
 	        	 }
 	        	 else {
 	        		 if(jeu.getLettresDejaDonnees().contains(lettre)) {
-	        				                 	info.setText("Tu as dï¿½jï¿½ essayï¿½ pied tendre!");
+	        				                 	info.setText("Tu as déjà essayé pied tendre!");
 	        		 }
 		                 else {
 		                 	jeu.setLettresDejaDonnees(lettre+ jeu.getLettresDejaDonnees());
 		                	 ((Node) event.getSource()).setStyle("-fx-base: #00FF00;");
 		                	 info.setText("Bonne lettre Cowboy!");
 		                	 mot.setText( addLettreUnderscore(lettre));
-		                	 jeu.setNbLettresTrouvees(jeu.getNbLettresTrouvees()+1);
+		                 }
 	        	 }
-	        	 }
-	        if(jeu.MaxErreursDepasse()||jeu.ToutTrouve()){
-	        	try {
-					fin(event);
-				} catch (IOException e) {
-			
-					e.printStackTrace();
-				}
-	        }
+	       
+		        if(jeu.MaxErreursDepasse()||jeu.ToutTrouve()){
+		        	try {
+						fin(event);
+					} catch (IOException e) {
+				
+						e.printStackTrace();
+					}
+		        }
 	       
 	}
 }
