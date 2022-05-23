@@ -1,6 +1,8 @@
 package application;
 
-import java.util.Vector;
+import java.awt.Color;
+import java.awt.Paint;
+import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,6 +10,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 
@@ -27,15 +31,15 @@ public class Jeu {
 		   //pour indiquer la fin du jeu
 		   boolean quitterJeu;
 
-		   //réponse du joueur 
+		   //rï¿½ponse du joueur 
 		   String reponse;
     		   
-		   //positions où se trouve le caractère proposé par le joueur dans le mot à deviner
+		   //positions oï¿½ se trouve le caractï¿½re proposï¿½ par le joueur dans le mot ï¿½ deviner
 		   Vector<Integer> pos; 
 	
-		   //pour gérer le jeu
+		   //pour gï¿½rer le jeu
 		   GestionJeu jeu = new GestionJeu(Jeu.class.getResource("Dico.txt").getFile());
-	   //  GestionJeu jeu = new GestionJeu(getClass().getResource("/Dico.txt").getFile();... si on avait été dans une méthode d'instance
+	   //  GestionJeu jeu = new GestionJeu(getClass().getResource("/Dico.txt").getFile();... si on avait ï¿½tï¿½ dans une mï¿½thode d'instance
 		   
 		   
 		   quitterJeu = false;
@@ -46,13 +50,13 @@ public class Jeu {
 		       do
 		       {
 		    	   do
-		           {//on saisit la lettre proposée par le joueur
+		           {//on saisit la lettre proposï¿½e par le joueur
 		    		   System.out.println("Votre lettre : ");
 		               BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		               reponse = in.readLine().toUpperCase();
 		           } while (!(jeu.CaractereAutorise(reponse) && (jeu.getLettresDejaDonnees().indexOf(reponse.charAt(0))==-1)));
 						
-		    	   //la lettre choisie est mémorisée pour éviter que le joueur ne la redonne par la suite
+		    	   //la lettre choisie est mï¿½morisï¿½e pour ï¿½viter que le joueur ne la redonne par la suite
 		    	   jeu.MemoriserLettreChoisie(reponse.charAt(0));
 	                
 		    	   pos = new Vector<Integer>();
@@ -60,7 +64,7 @@ public class Jeu {
 		           {	//la lettre n'est pas dans le mot, une erreur de plus
 		                jeu.MAJNbErreurs();
 		                if (jeu.MaxErreursDepasse())
-		                {//le joueur a dépassé le nombre masimum d'erreurs autorisé...il perd
+		                {//le joueur a dï¿½passï¿½ le nombre masimum d'erreurs autorisï¿½...il perd
 		                	finJeu = true;
 		                    System.out.println("Vous perdez. Il fallait trouver "+jeu.getMotMystere()+" !!!");
 		                }
@@ -68,9 +72,9 @@ public class Jeu {
 		                	System.out.println("Nb d'erreurs: " + jeu.getNbErreurs());
 		           }
 		           else
-		           {	//la lettre est dans le mot à toutes les positions indiquées dans pos
+		           {	//la lettre est dans le mot ï¿½ toutes les positions indiquï¿½es dans pos
 		        	   	if (jeu.ToutTrouve()) 
-		                {	//toutes les lettres ont été trouvées
+		                {	//toutes les lettres ont ï¿½tï¿½ trouvï¿½es
 		                    finJeu = true;
 		                    System.out.println("Vous gagnez!!!");
 		                }
@@ -90,40 +94,122 @@ public class Jeu {
  */
 
 public class enJeuController extends ButtonController{
+	@FXML Label info;
+	@FXML Label mot;
+
+	@FXML ImageView corde;
+	@FXML ImageView tete;
+	@FXML ImageView corp;
+	@FXML ImageView bras1;
+	@FXML ImageView bras2;
+	@FXML ImageView jambe1;
+	@FXML ImageView jambe2;
+
+
+
+	@FXML Button a;
+	@FXML Button b;
+	@FXML Button c;
+	@FXML Button d;
+	@FXML Button e;
+	@FXML Button f;
+	@FXML Button g;
+	@FXML Button h;
+	@FXML Button i;
+	@FXML Button j;
+	@FXML Button l;
+	@FXML Button m;
+	@FXML Button n;
+	@FXML Button o;
+	@FXML Button p;
+	@FXML Button q;
+	@FXML Button r;
+	@FXML Button s;
+	@FXML Button t;
+	@FXML Button u;
+	@FXML Button v;
+	@FXML Button w;
+	@FXML Button x;
+	@FXML Button y;
+	@FXML Button z;
+
+	GestionJeu jeu = getJeu();
 	
+	public String toUnderScore(String mot) {
+		String under = "";
+		for(int i = 0;i<mot.length();i++)
+			under = under + "_ ";
+		return under;
+		
+	}
+	public String addLettre() {
+	return "";	
+	}
+	@FXML public void initialize() {
+		info.setText("Salut Cowboy, prï¿½t ï¿½ jouer? Appuie sur une lettre pour commencer!");
+		mot.setText(toUnderScore(jeu.getMotMystere()));
+		corde.setVisible(false);
+		jambe1.setVisible(false);
+		jambe2.setVisible(false);
+		bras1.setVisible(false);
+		bras2.setVisible(false);
+		tete.setVisible(false);
+		corp.setVisible(false);
+	}
 	
-	@FXML private Button buttonA;
-	
-	private Vector<Integer> pos; 
+	public void erreur() {
+		switch(jeu.getNbErreurs()) {
+		case 1: corde.setVisible(true); 
+		break;
+		case 2: tete.setVisible(true);
+		break;
+		case 3: corp.setVisible(true);
+		break;
+		case 4: jambe1.setVisible(true);
+		}
+	}
 	
 	public enJeuController(GestionJeu jeu, GestionOption option) {
 		super(jeu, option);
 	}
 	
-	public void handleButtonKeybord(ActionEvent event) { 
-		 getGestionJeu().MemoriserLettreChoisie('a');
-         
-  	   pos = new Vector<Integer>();
-         if (getGestionJeu().ChercherLettreDansMot(reponse.charAt(0), pos) == 0)
-         {	//la lettre n'est pas dans le mot, une erreur de plus
-        	 getGestionJeu().MAJNbErreurs();
-              if (getGestionJeu().MaxErreursDepasse())
-              {//le joueur a dépassé le nombre masimum d'erreurs autorisé...il perd
-            	  
-              }
-              else
-              	System.out.println("Nb d'erreurs: " + jeu.getNbErreurs());
-         }
-         else
-         {	//la lettre est dans le mot à toutes les positions indiquées dans pos
-      	   	if (jeu.ToutTrouve()) 
-              {	//toutes les lettres ont été trouvées
-                  finJeu = true;
-                  System.out.println("Vous gagnez!!!");
-              }
-              else
-              	// System.out.println(reponse.charAt(0) + " est en position " + pos);		        
-         }
-	}
+	public void handleButtonKeybord(ActionEvent event) {
+		
+	    String lettre =    ((Button) event.getSource()).getId().toUpperCase();
+	       System.out.print(lettre);
+	        	
+	        	 if(!jeu.getMotMystere().contains(lettre)) {
+	                 if(jeu.getLettresDejaDonnees().contains(lettre))
+	                 	info.setText("Tu as dï¿½jï¿½ essayï¿½ pied tendre!");
+	                 else {
+	                 	jeu.setLettresDejaDonnees(lettre+ jeu.getLettresDejaDonnees());
+	                 	jeu.MAJNbErreurs();
+	                	 ((Node) event.getSource()).setStyle("-fx-base: #FF0000;");
+	                	 info.setText("Mauvaise lettre Cowboy!");
 
+	                	 erreur();
+	                 }
+	        	 }
+	        	 else {
+	        		 if(jeu.getLettresDejaDonnees().contains(lettre)) {
+	        				                 	info.setText("Tu as dï¿½jï¿½ essayï¿½ pied tendre!");
+	        		 }
+		                 else {
+		                 	jeu.setLettresDejaDonnees(lettre+ jeu.getLettresDejaDonnees());
+		                	 ((Node) event.getSource()).setStyle("-fx-base: #00FF00;");
+		                	 info.setText("Bonne lettre Cowboy!");
+		                	 jeu.setNbLettresTrouvees(jeu.getNbLettresTrouvees()+1);
+	        	 }
+	        	 }
+	        if(jeu.MaxErreursDepasse()||jeu.ToutTrouve()){
+	        	try {
+					troisEcran(event);
+				} catch (IOException e) {
+			
+					e.printStackTrace();
+				}
+	        }
+	       
+	}
 }
+

@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -20,7 +21,7 @@ public class ButtonController {
 	private GestionOption option;
 	private GestionJeu jeu;
 	
-	
+	@FXML Label rep;
 	@FXML Button fin;
 	@FXML Button reco;
 	@FXML Button lancer;
@@ -34,6 +35,9 @@ public class ButtonController {
 	 
 	 public ButtonController() {
 		 
+	 }
+	 public GestionJeu getJeu() {
+		 return jeu;
 	 }
 	public ButtonController(GestionJeu jeu,GestionOption option) {
 			 this.jeu = jeu;
