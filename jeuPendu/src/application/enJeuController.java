@@ -1,6 +1,7 @@
 package application;
 
 import java.io.IOException;
+import java.util.Vector;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -122,18 +123,37 @@ public class enJeuController extends ButtonController{
 	@FXML Button z;
 
 	GestionJeu jeu = getJeu();
+	Vector <Integer> pos = new Vector <Integer>();
 	
 	public String toUnderScore(String mot) {
 		String under = "";
 		for(int i = 0;i<mot.length();i++)
-			under = under + "_ ";
+			under = under + "_";
 		return under;
 		
 	}
-	public String addLettre() {
-	return "";	
+	
+	@FXML
+	public String addLettreUnderscore(String car) {
+		String newMot = "";
+		String ancienMot = mot.getText();
+		System.out.print(ancienMot);
+		char cara = car.charAt(0); 
+		pos.removeAllElements();
+		
+		int nb = jeu.ChercherLettreDansMot(cara, pos);
+		for(int j = 0;j<nb;j++) {
+		for(int i = 0;i<jeu.getMotMystere().length();i++) {
+			if(pos.indexOf(i)==0)
+				newMot = newMot + car ;
+			else 
+				newMot = newMot + ancienMot.charAt(i); 
+		}}
+		return newMot;
+		
 	}
 	@FXML public void initialize() {
+		jeu.setNbMaxErreurs(7);
 		info.setText("Salut Cowboy, prêt à jouer? Appuie sur une lettre pour commencer!");
 		mot.setText(toUnderScore(jeu.getMotMystere()));
 		corde.setVisible(false);
@@ -186,6 +206,7 @@ public class enJeuController extends ButtonController{
 		                 	jeu.setLettresDejaDonnees(lettre+ jeu.getLettresDejaDonnees());
 		                	 ((Node) event.getSource()).setStyle("-fx-base: #00FF00;");
 		                	 info.setText("Bonne lettre Cowboy!");
+		                	 mot.setText( addLettreUnderscore(lettre));
 		                	 jeu.setNbLettresTrouvees(jeu.getNbLettresTrouvees()+1);
 	        	 }
 	        	 }
