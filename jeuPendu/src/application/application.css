@@ -10,3 +10,8 @@
     -fx-background-image: url("../images/ecran1BG.jpg") ;
      -fx-background-size: 100% 100%;
 }
+
+.SupportFarWest{
+	-fx-background-image: url("../images/SupportFarWest.png") ;
+     -fx-background-size: 100% 100%;
+}
