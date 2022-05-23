@@ -1,18 +1,13 @@
 package application;
 
-import java.awt.Color;
-import java.awt.Paint;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
 
 /*
 public class Jeu {
@@ -152,13 +147,13 @@ public class enJeuController extends ButtonController{
 	
 	public void erreur() {
 		switch(jeu.getNbErreurs()) {
-		case 1: corde.setVisible(true); 
-		break;
-		case 2: tete.setVisible(true);
-		break;
-		case 3: corp.setVisible(true);
-		break;
-		case 4: jambe1.setVisible(true);
+			case 1: corde.setVisible(true); break;
+			case 2: tete.setVisible(true); break;
+			case 3: corp.setVisible(true); break;
+			case 4: jambe1.setVisible(true); break;
+			case 5 : jambe2.setVisible(true); break;
+			case 6 : bras1.setVisible(true); break;
+			case 7 : bras2.setVisible(true); break;
 		}
 	}
 	
@@ -168,7 +163,7 @@ public class enJeuController extends ButtonController{
 	
 	public void handleButtonKeybord(ActionEvent event) {
 		
-	    String lettre =    ((Button) event.getSource()).getId().toUpperCase();
+	    String lettre =((Button) event.getSource()).getId().toUpperCase();
 	       // System.out.print(lettre);
 	        	
 	        	 if(!jeu.getMotMystere().contains(lettre)) {
