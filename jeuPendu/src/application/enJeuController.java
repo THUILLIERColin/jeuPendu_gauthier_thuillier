@@ -1,6 +1,14 @@
 package application;
 
+import java.util.Vector;
+
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 
 
@@ -84,14 +92,38 @@ public class Jeu {
 public class enJeuController extends ButtonController{
 	
 	
+	@FXML private Button buttonA;
 	
+	private Vector<Integer> pos; 
 	
 	public enJeuController(GestionJeu jeu, GestionOption option) {
 		super(jeu, option);
 	}
 	
-	public void handleButtonKeybord(ActionEvent event) {
-		
+	public void handleButtonKeybord(ActionEvent event) { 
+		 getGestionJeu().MemoriserLettreChoisie('a');
+         
+  	   pos = new Vector<Integer>();
+         if (getGestionJeu().ChercherLettreDansMot(reponse.charAt(0), pos) == 0)
+         {	//la lettre n'est pas dans le mot, une erreur de plus
+        	 getGestionJeu().MAJNbErreurs();
+              if (getGestionJeu().MaxErreursDepasse())
+              {//le joueur a dépassé le nombre masimum d'erreurs autorisé...il perd
+            	  
+              }
+              else
+              	System.out.println("Nb d'erreurs: " + jeu.getNbErreurs());
+         }
+         else
+         {	//la lettre est dans le mot à toutes les positions indiquées dans pos
+      	   	if (jeu.ToutTrouve()) 
+              {	//toutes les lettres ont été trouvées
+                  finJeu = true;
+                  System.out.println("Vous gagnez!!!");
+              }
+              else
+              	// System.out.println(reponse.charAt(0) + " est en position " + pos);		        
+         }
 	}
 
 }

@@ -78,7 +78,7 @@ public class ButtonController {
 	
 	public void troisEcran(ActionEvent event) throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("fin.fxml"));
-		finController fin = new finController(jeu);
+		finController fin = new finController(jeu,option);
 		loader.setController(fin);
 		root = loader.load();
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
