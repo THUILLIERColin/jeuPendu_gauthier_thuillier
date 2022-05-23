@@ -1,6 +1,10 @@
 package application;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 
 
 
@@ -82,9 +86,55 @@ public class Jeu {
  */
 
 public class enJeuController extends ButtonController{
+	@FXML Label info;
+	@FXML Label mot;
+
+	@FXML ImageView corde;
+	@FXML Button A;
+	@FXML Button b;
+	@FXML Button c;
+	@FXML Button d;
+	@FXML Button e;
+	@FXML Button f;
+	@FXML Button g;
+	@FXML Button h;
+	@FXML Button i;
+	@FXML Button j;
+	@FXML Button l;
+	@FXML Button m;
+	@FXML Button n;
+	@FXML Button o;
+	@FXML Button p;
+	@FXML Button q;
+	@FXML Button r;
+	@FXML Button s;
+	@FXML Button t;
+	@FXML Button u;
+	@FXML Button v;
+	@FXML Button w;
+	@FXML Button x;
+	@FXML Button y;
+	@FXML Button z;
+
+	GestionJeu jeu = getJeu();
 	
-	
-	
+	public String toUnderScore(String mot) {
+		String under = "";
+		for(int i = 0;i<mot.length();i++)
+			under = under + "_ ";
+		System.out.println(under + mot);
+		return under;
+		
+	}
+	public String addLettre() {
+	return "";	
+	}
+	@FXML public void initialize() {
+		info.setText("Salut Cowboy, prêt à jouer? Appuie sur une lettre pour commencer!");
+		mot.setText(toUnderScore(jeu.getMotMystere()));
+		
+		
+	}
 	
 	public enJeuController(GestionJeu jeu, GestionOption option) {
 		super(jeu, option);

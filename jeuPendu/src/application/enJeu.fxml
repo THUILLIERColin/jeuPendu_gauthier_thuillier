@@ -2,13 +2,90 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg2" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="82.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="A" />
-      <Label layoutX="120.0" layoutY="169.0" text="Mot mystere" />
-      <Button layoutX="120.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="B" />
-      <Button fx:id="fin" layoutX="402.0" layoutY="75.0" mnemonicParsing="false" onAction="#troisEcran" text="Button" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="101.0" layoutX="10.0" layoutY="44.0" opacity="0.54" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="437.0" />
+      <Button layoutX="63.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="A" />
+      <Button layoutX="97.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="B" />
+      <Button fx:id="fin" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#troisEcran" text="Button" />
+      <ImageView fx:id="corde" fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/corde.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/tete.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Corps.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/brasG.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/jambeG.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/jambeD.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="239.0" fitWidth="400.0" layoutX="369.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/brasD.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="125.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="C" />
+      <Button layoutX="159.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="D" />
+      <Button layoutX="187.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="E" />
+      <Button layoutX="221.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="F" />
+      <Button layoutX="251.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="G" />
+      <Button layoutX="281.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="H" />
+      <Button layoutX="46.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="I" />
+      <Button layoutX="80.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="J" />
+      <Button layoutX="108.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="K" />
+      <Button layoutX="142.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="L" />
+      <Button layoutX="170.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="M" />
+      <Button layoutX="204.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="N" />
+      <Button layoutX="238.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="O" />
+      <Button layoutX="282.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="P" />
+      <Button layoutX="310.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Q" />
+      <Button layoutX="69.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="R" />
+      <Button layoutX="103.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="S" />
+      <Button layoutX="137.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="T" />
+      <Button layoutX="170.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="U" />
+      <Button layoutX="204.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="V" />
+      <Button layoutX="236.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="W" />
+      <Button layoutX="270.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="X" />
+      <Button layoutX="300.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Y" />
+      <Button layoutX="334.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Z" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="33.0" layoutX="396.0" layoutY="306.0" stroke="BLACK" strokeType="INSIDE" width="187.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="207.0" layoutX="551.0" layoutY="104.0" stroke="BLACK" strokeType="INSIDE" width="19.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="16.0" layoutX="465.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" width="118.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="63.0" layoutX="47.0" layoutY="176.0" opacity="0.54" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="339.0" />
+      <Label fx:id="mot" layoutX="50.0" layoutY="178.0" prefHeight="63.0" prefWidth="333.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Agency FB Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="info" layoutX="11.0" layoutY="46.0" prefHeight="101.0" prefWidth="437.0" wrapText="true">
+         <font>
+            <Font name="Agency FB Bold" size="27.0" />
+         </font>
+      </Label>
    </children>
 </Pane>
