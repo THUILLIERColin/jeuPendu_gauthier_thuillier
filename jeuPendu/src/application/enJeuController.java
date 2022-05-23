@@ -14,14 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-
-
 /*
- * import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Vector;
-
 public class Jeu {
 
 	public static void main(String[] args) throws IOException {
@@ -146,7 +139,7 @@ public class enJeuController extends ButtonController{
 	return "";	
 	}
 	@FXML public void initialize() {
-		info.setText("Salut Cowboy, prï¿½t ï¿½ jouer? Appuie sur une lettre pour commencer!");
+		info.setText("Salut Cowboy, prêt à jouer? Appuie sur une lettre pour commencer!");
 		mot.setText(toUnderScore(jeu.getMotMystere()));
 		corde.setVisible(false);
 		jambe1.setVisible(false);
@@ -176,11 +169,11 @@ public class enJeuController extends ButtonController{
 	public void handleButtonKeybord(ActionEvent event) {
 		
 	    String lettre =    ((Button) event.getSource()).getId().toUpperCase();
-	       System.out.print(lettre);
+	       // System.out.print(lettre);
 	        	
 	        	 if(!jeu.getMotMystere().contains(lettre)) {
 	                 if(jeu.getLettresDejaDonnees().contains(lettre))
-	                 	info.setText("Tu as dï¿½jï¿½ essayï¿½ pied tendre!");
+	                 	info.setText("Tu as déjà essayé pied tendre!");
 	                 else {
 	                 	jeu.setLettresDejaDonnees(lettre+ jeu.getLettresDejaDonnees());
 	                 	jeu.MAJNbErreurs();
@@ -203,7 +196,7 @@ public class enJeuController extends ButtonController{
 	        	 }
 	        if(jeu.MaxErreursDepasse()||jeu.ToutTrouve()){
 	        	try {
-					troisEcran(event);
+					fin(event);
 				} catch (IOException e) {
 			
 					e.printStackTrace();

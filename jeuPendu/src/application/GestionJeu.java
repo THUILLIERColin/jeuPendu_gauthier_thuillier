@@ -280,6 +280,8 @@ public class GestionJeu {
 
 		int index = this.motMystere.indexOf(car) ;  
 		int nbpos=0;
+		
+		System.out.println(index);
 
 		while (index >=  0) {  
 			nbpos++;
