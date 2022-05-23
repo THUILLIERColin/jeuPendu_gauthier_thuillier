@@ -14,16 +14,16 @@ import javafx.stage.Stage;
 
 public class finController extends ButtonController{
 	GestionJeu jeu = getJeu();
-	boolean perduGagne = true;
 	private String MM = jeu.getMotMystere();
 	@FXML Label L1;
 	@FXML Label L2;
 	@FXML public void initialize() {
+	
 		L1.setText(MM);
-		if(perduGagne)
-			L2.setText("Bravo cowboy tu as gagné");
-		else
+		if(jeu.MaxErreursDepasse())
 			L2.setText("Aie aie cowboy tu as perdu..");
+		else
+			L2.setText("Bravo cowboy tu as gagné");
 
 	}
 	public finController() {

@@ -1,10 +1,18 @@
 package application;
 
+import java.awt.Color;
+import java.awt.Paint;
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 
 
@@ -90,7 +98,16 @@ public class enJeuController extends ButtonController{
 	@FXML Label mot;
 
 	@FXML ImageView corde;
-	@FXML Button A;
+	@FXML ImageView tete;
+	@FXML ImageView corp;
+	@FXML ImageView bras1;
+	@FXML ImageView bras2;
+	@FXML ImageView jambe1;
+	@FXML ImageView jambe2;
+
+
+
+	@FXML Button a;
 	@FXML Button b;
 	@FXML Button c;
 	@FXML Button d;
@@ -122,7 +139,6 @@ public class enJeuController extends ButtonController{
 		String under = "";
 		for(int i = 0;i<mot.length();i++)
 			under = under + "_ ";
-		System.out.println(under + mot);
 		return under;
 		
 	}
@@ -132,8 +148,25 @@ public class enJeuController extends ButtonController{
 	@FXML public void initialize() {
 		info.setText("Salut Cowboy, prêt à jouer? Appuie sur une lettre pour commencer!");
 		mot.setText(toUnderScore(jeu.getMotMystere()));
-		
-		
+		corde.setVisible(false);
+		jambe1.setVisible(false);
+		jambe2.setVisible(false);
+		bras1.setVisible(false);
+		bras2.setVisible(false);
+		tete.setVisible(false);
+		corp.setVisible(false);
+	}
+	
+	public void erreur() {
+		switch(jeu.getNbErreurs()) {
+		case 1: corde.setVisible(true); 
+		break;
+		case 2: tete.setVisible(true);
+		break;
+		case 3: corp.setVisible(true);
+		break;
+		case 4: jambe1.setVisible(true);
+		}
 	}
 	
 	public enJeuController(GestionJeu jeu, GestionOption option) {
@@ -142,6 +175,41 @@ public class enJeuController extends ButtonController{
 	
 	public void handleButtonKeybord(ActionEvent event) {
 		
-	}
+	    String lettre =    ((Button) event.getSource()).getId().toUpperCase();
+	       System.out.print(lettre);
+	        	
+	        	 if(!jeu.getMotMystere().contains(lettre)) {
+	                 if(jeu.getLettresDejaDonnees().contains(lettre))
+	                 	info.setText("Tu as déjà essayé pied tendre!");
+	                 else {
+	                 	jeu.setLettresDejaDonnees(lettre+ jeu.getLettresDejaDonnees());
+	                 	jeu.MAJNbErreurs();
+	                	 ((Node) event.getSource()).setStyle("-fx-base: #FF0000;");
+	                	 info.setText("Mauvaise lettre Cowboy!");
 
+	                	 erreur();
+	                 }
+	        	 }
+	        	 else {
+	        		 if(jeu.getLettresDejaDonnees().contains(lettre)) {
+	        				                 	info.setText("Tu as déjà essayé pied tendre!");
+	        		 }
+		                 else {
+		                 	jeu.setLettresDejaDonnees(lettre+ jeu.getLettresDejaDonnees());
+		                	 ((Node) event.getSource()).setStyle("-fx-base: #00FF00;");
+		                	 info.setText("Bonne lettre Cowboy!");
+		                	 jeu.setNbLettresTrouvees(jeu.getNbLettresTrouvees()+1);
+	        	 }
+	        	 }
+	        if(jeu.MaxErreursDepasse()||jeu.ToutTrouve()){
+	        	try {
+					troisEcran(event);
+				} catch (IOException e) {
+			
+					e.printStackTrace();
+				}
+	        }
+	       
+	}
 }
+

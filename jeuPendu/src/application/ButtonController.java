@@ -21,7 +21,7 @@ public class ButtonController {
 	private GestionOption option;
 	private GestionJeu jeu;
 	
-	
+	@FXML Label rep;
 	@FXML Button fin;
 	@FXML Button reco;
 	@FXML Button lancer;
