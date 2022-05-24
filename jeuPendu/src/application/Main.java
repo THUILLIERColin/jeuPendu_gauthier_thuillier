@@ -30,11 +30,11 @@ public class Main extends Application {
 		  FXMLLoader loader = new FXMLLoader(getClass().getResource("introduction.fxml"));
 		  IntroductionController intro= new IntroductionController(jeu,option);
 		  loader.setController(intro);
+		  stage.show();
 		  Pane root = loader.load();
 		  Scene scene = new Scene(root,1300,700);
 		  stage.setTitle("Intoduction");
 		  stage.setScene(scene);
-		  stage.show();
 	  } catch(Exception e) {
 	   e.printStackTrace();
 	  }
