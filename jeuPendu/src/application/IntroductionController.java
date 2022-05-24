@@ -41,6 +41,25 @@ public class IntroductionController extends ButtonController {
 		dialog.show();
 		
 	}
+	
+	@FXML
+	public void ouvrirOption(ActionEvent event) throws IOException {
+		
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("support.fxml"));
+        optionController optionController = new optionController();
+        loader.setController(optionController);
+        AnchorPane support = loader.load();
+	
+        Dialog<ButtonType> dialog = new Dialog<>();
+        dialog.setTitle("Support");
+        dialog.getDialogPane().setContent(support);
+        
+        ButtonType buttonFermer = new ButtonType("Fermer", ButtonData.FINISH);
+		dialog.getDialogPane().getButtonTypes().addAll(buttonFermer);
+		
+		dialog.show();
+		
+	}
 		
 
 }
