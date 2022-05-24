@@ -138,19 +138,20 @@ public class enJeuController extends ButtonController{
 		
 		String newMot = "";
 		String ancienMot = mot.getText();
+		ancienMot = ancienMot.replace(" ","");
 		char cara = car.charAt(0); 
 		pos.removeAllElements();
 		
 		int nb = jeu.ChercherLettreDansMot(cara, pos);
 		
 		for(int i = 0;i<jeu.getMotMystere().length();i++) {
+			
 			if(pos.indexOf(i)!=-1) {
-				newMot = newMot + car ;
+				newMot = newMot + car;
 
 			}
 			else {
 				newMot = newMot + ancienMot.charAt(i); 
-
 			}
 		}
 		
@@ -160,10 +161,18 @@ public class enJeuController extends ButtonController{
 		return newMot;
 		
 	}
+	@FXML public String addSpace(String s) {
+		String plusSpace = "";
+		for(int i = 0;i<s.length();i++) {
+			plusSpace = plusSpace + s.charAt(i) + " ";
+		}
+		return plusSpace;
+	}
+	
 	@FXML public void initialize() {
 		jeu.setNbMaxErreurs(7);
-		info.setText("Salut Cowboy, prêt à jouer? Appuie sur une lettre pour commencer!");
-		mot.setText(toUnderScore(jeu.getMotMystere()));
+		info.setText("Salut Cowboy, prêt à jouer? Appuie sur une lettre pour commencer!"+ jeu.getMotMystere());
+		mot.setText(addSpace(toUnderScore(jeu.getMotMystere())));
 		corde.setVisible(false);
 		jambe1.setVisible(false);
 		jambe2.setVisible(false);
@@ -213,7 +222,7 @@ public class enJeuController extends ButtonController{
 		                 	jeu.setLettresDejaDonnees(lettre+ jeu.getLettresDejaDonnees());
 		                	 ((Node) event.getSource()).setStyle("-fx-base: #00FF00;");
 		                	 info.setText("Bonne lettre Cowboy!");
-		                	 mot.setText( addLettreUnderscore(lettre));
+		                	 mot.setText( addSpace(addLettreUnderscore(lettre)));
 		                 }
 	        	 }
 	       
