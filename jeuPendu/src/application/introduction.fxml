@@ -2,20 +2,55 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="700.0" maxWidth="1300.0" minHeight="700.0" minWidth="1300.0" prefHeight="700.0" prefWidth="1300.0" styleClass="bodybg1" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="305.0" layoutY="480.0" mnemonicParsing="false" onAction="#ouvrirSupport" text="Support / Aide" />
-      <Button fx:id="quitter" layoutX="284.0" layoutY="557.0" maxHeight="52.0" maxWidth="136.0" minHeight="52.0" minWidth="136.0" mnemonicParsing="false" onAction="#quitterPartie" prefHeight="52.0" prefWidth="136.0">
-         <graphic>
-            <ImageView fitHeight="52.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true" />
-         </graphic></Button>
-      <Button fx:id="lancer" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="284.0" layoutY="379.0" maxHeight="52.0" maxWidth="136.0" minHeight="52.0" minWidth="136.0" mnemonicParsing="false" onAction="#lancerPartie" prefHeight="52.0" prefWidth="136.0">
+      <Label layoutX="161.0" layoutY="58.0" prefHeight="80.0" prefWidth="293.0" text="Bienvenue" textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="System Bold" size="54.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="152.0" text="Vous allez jouer au jeu du">
+         <font>
+            <Font name="System Bold Italic" size="54.0" />
+         </font>
+      </Label>
+      <Label layoutX="856.0" layoutY="350.0" text="P E N D U" textFill="WHITE">
+         <font>
+            <Font size="71.0" />
+         </font>
+      </Label>
+      <Label layoutX="866.0" layoutY="341.0" text="_ _ _  _ _" textFill="WHITE">
+         <font>
+            <Font size="83.0" />
+         </font>
+      </Label>
+      <Button fx:id="lancer" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="284.0" layoutY="320.0" maxHeight="60.0" maxWidth="178.0" minHeight="60.0" minWidth="154.0" mnemonicParsing="false" onAction="#lancerPartie" prefHeight="60.0" prefWidth="154.0">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/lancer.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
+      <Button layoutX="284.0" layoutY="396.0" maxHeight="60.0" maxWidth="154.0" minHeight="60.0" minWidth="154.0" mnemonicParsing="false" onAction="#ouvrirOption" prefHeight="60.0" prefWidth="154.0" text="Option" />
+      <Button layoutX="284.0" layoutY="471.0" maxHeight="60.0" maxWidth="154.0" minHeight="60.0" minWidth="154.0" mnemonicParsing="false" onAction="#ouvrirSupport" prefHeight="60.0" prefWidth="154.0" text="Support / Aide" />
+      <Button fx:id="quitter" layoutX="284.0" layoutY="546.0" maxHeight="60.0" maxWidth="154.0" minHeight="60.0" minWidth="154.0" mnemonicParsing="false" onAction="#quitterPartie" prefHeight="60.0" prefWidth="154.0">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/quit.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
    </children>
 </Pane>
