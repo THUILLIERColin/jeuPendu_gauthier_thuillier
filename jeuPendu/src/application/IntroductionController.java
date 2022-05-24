@@ -27,15 +27,15 @@ public class IntroductionController extends ButtonController {
 	public void ouvrirSupport(ActionEvent event) throws IOException {
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("support.fxml"));
-        optionController optionController = new optionController();
-        loader.setController(optionController);
+        supportController supportController = new supportController();
+        loader.setController(supportController);
         AnchorPane support = loader.load();
 	
         Dialog<ButtonType> dialog = new Dialog<>();
         dialog.setTitle("Support");
         dialog.getDialogPane().setContent(support);
         
-        ButtonType buttonFermer = new ButtonType("Fermer", ButtonData.FINISH);
+        ButtonType buttonFermer = new ButtonType("Fermer", ButtonData.OK_DONE);
 		dialog.getDialogPane().getButtonTypes().addAll(buttonFermer);
 		
 		dialog.show();
@@ -45,7 +45,7 @@ public class IntroductionController extends ButtonController {
 	@FXML
 	public void ouvrirOption(ActionEvent event) throws IOException {
 		
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("support.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("option.fxml"));
         optionController optionController = new optionController();
         loader.setController(optionController);
         AnchorPane support = loader.load();
@@ -54,8 +54,9 @@ public class IntroductionController extends ButtonController {
         dialog.setTitle("Support");
         dialog.getDialogPane().setContent(support);
         
-        ButtonType buttonFermer = new ButtonType("Fermer", ButtonData.FINISH);
-		dialog.getDialogPane().getButtonTypes().addAll(buttonFermer);
+        ButtonType buttonApply = new ButtonType("Appliquer", ButtonData.APPLY);
+        ButtonType buttonCancel = new ButtonType("Retour", ButtonData.CANCEL_CLOSE);
+		dialog.getDialogPane().getButtonTypes().addAll(buttonApply, buttonCancel);
 		
 		dialog.show();
 		

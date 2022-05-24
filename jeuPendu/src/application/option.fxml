@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="524.0" prefWidth="842.0" styleClass="OptionFarWest" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="34.0" fitWidth="251.0" layoutX="51.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/optionFarWest_Titre.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0d1d18c" height="366.0" layoutX="57.0" layoutY="97.0" stroke="#ffffff00" strokeType="INSIDE" width="726.0" />
+      <Label layoutX="132.0" layoutY="132.0" text="Taille de la police ">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Slider layoutX="119.0" layoutY="174.0" prefHeight="31.0" prefWidth="202.0" />
+      <Label fx:id="taillePolice" layoutX="334.0" layoutY="155.0" prefHeight="44.0" prefWidth="43.0" />
+      <Label layoutX="444.0" layoutY="174.0" text="Difficulté">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spinneurDifficulte" layoutX="562.0" layoutY="177.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6b6b6b" height="95.0" layoutX="334.0" layoutY="317.0" stroke="#ffffff00" strokeType="INSIDE" width="166.0" />
+      <CheckBox fx:id="westernTheme" layoutX="358.0" layoutY="324.0" mnemonicParsing="false" text="Western" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="futuristeTheme" layoutX="358.0" layoutY="368.0" mnemonicParsing="false" text="Futuriste" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6b6b6b" height="30.0" layoutX="333.0" layoutY="280.0" stroke="BLACK" strokeType="INSIDE" width="166.0" />
+      <Label layoutX="379.0" layoutY="277.0" text="Thème" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
