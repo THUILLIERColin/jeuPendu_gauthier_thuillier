@@ -94,6 +94,12 @@ public class enJeuController extends ButtonController{
 	@FXML ImageView jambe1;
 	@FXML ImageView jambe2;
 
+	@FXML ImageView coeur1;
+	@FXML ImageView coeur2;
+	@FXML ImageView coeur3;
+	@FXML ImageView coeur4;
+	@FXML ImageView coeur5;
+	
 
 
 	@FXML Button a;
@@ -180,17 +186,24 @@ public class enJeuController extends ButtonController{
 		bras2.setVisible(false);
 		tete.setVisible(false);
 		corp.setVisible(false);
+		coeur1.setVisible(true);
+		coeur2.setVisible(true);
+		coeur3.setVisible(true);
+		coeur4.setVisible(true);
+		coeur5.setVisible(true);
+		
 	}
 	
 	public void erreur() {
 		switch(jeu.getNbErreurs()) {
-			case 1: corde.setVisible(true); break;
-			case 2: tete.setVisible(true); break;
-			case 3: corp.setVisible(true); break;
-			case 4: jambe1.setVisible(true); break;
-			case 5 : jambe2.setVisible(true); break;
-			case 6 : bras1.setVisible(true); break;
-			case 7 : bras2.setVisible(true); break;
+			case 1: corde.setVisible(true);
+			coeur1.setVisible(false); break;
+			case 2: tete.setVisible(true);coeur2.setVisible(false); break;
+			case 3: corp.setVisible(true);coeur3.setVisible(false); break;
+			case 4: jambe1.setVisible(true);coeur4.setVisible(false); break;
+			case 5 : jambe2.setVisible(true); coeur5.setVisible(false);break;
+			//case 6 : bras1.setVisible(true);coeur6.setVisible(false); break;
+			//case 7 : bras2.setVisible(true); coeur7.setVisible(false);break;
 		}
 	}
 	
