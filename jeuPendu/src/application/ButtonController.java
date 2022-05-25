@@ -20,14 +20,13 @@ public class ButtonController {
 	private Pane root;
 	private GestionOption option;
 	private GestionJeu jeu;
-	
 	@FXML Label rep;
 	@FXML Button fin;
 	@FXML Button reco;
 	@FXML Button lancer;
 	@FXML Button quitter;
 	@FXML Button quitter2;
-	
+	@FXML Button test;
 	@FXML Button acceuille2;
 	@FXML Button acceuille;
 	
@@ -82,6 +81,9 @@ public class ButtonController {
 		stage.setScene(scene);
 	}
 	
+	public void applyChanges(ActionEvent event) {
+		System.out.println("applyyyyyy");
+	}
 	
 	public void fin(ActionEvent event) throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("fin.fxml"));

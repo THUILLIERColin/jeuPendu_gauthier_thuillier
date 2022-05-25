@@ -6,6 +6,7 @@ import java.util.Optional;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
@@ -21,7 +22,7 @@ private int police ;
 	}
 	@FXML Label LABELTEST;
 	@FXML Slider slider;
-	
+	@FXML Button applyButton;
 	 
 	@FXML public void initialize() {}
 	 
@@ -51,9 +52,10 @@ private int police ;
 		dialog.show();
 		
 	}
-	public void apply() {
-		System.out.println("apply merci");
-	}
+	
+	/*public void applyChanges(ActionEvent event) {
+		//System.out.println("applyyyyyy");
+	}*/
 	@FXML
 	public void ouvrirOption(ActionEvent event) throws IOException {
 		
@@ -70,7 +72,6 @@ private int police ;
 		dialog.getDialogPane().getButtonTypes().addAll(buttonApply, buttonCancel);
 		Optional<ButtonType> choice = dialog.showAndWait();
 		if(choice.get() == buttonApply) {
-			apply();
 		}
 		dialog.show();
 		
