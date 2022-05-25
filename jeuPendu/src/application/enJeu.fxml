@@ -19,37 +19,37 @@
       </Label>
       <Button fx:id="a" layoutX="374.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="A" />
       <Button fx:id="b" layoutX="403.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="B" />
-      <ImageView fx:id="corde" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="corde" fitHeight="239.0" fitWidth="400.0" layoutX="856.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/corde.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="tete" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="tete" fitHeight="304.0" fitWidth="304.0" layoutX="824.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/tete.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="corp" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="corp" fitHeight="321.0" fitWidth="304.0" layoutX="824.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/Corps.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="bras1" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bras1" fitHeight="320.0" fitWidth="304.0" layoutX="824.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/brasG.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="jambe1" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="jambe1" fitHeight="343.0" fitWidth="304.0" layoutX="824.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/jambeG.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="jambe2" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="jambe2" fitHeight="321.0" fitWidth="304.0" layoutX="823.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/jambeD.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="bras2" fitHeight="239.0" fitWidth="400.0" layoutX="941.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bras2" fitHeight="335.0" fitWidth="304.0" layoutX="824.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/brasD.png" />
          </image>
@@ -78,9 +78,9 @@
       <Button layoutX="581.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="X" fx:id="x" />
       <Button fx:id="y" layoutX="611.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Y" />
       <Button fx:id="z" layoutX="645.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Z" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="33.0" layoutX="974.0" layoutY="383.0" stroke="BLACK" strokeType="INSIDE" width="187.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="207.0" layoutX="1129.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="19.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="16.0" layoutX="1043.0" layoutY="171.0" stroke="BLACK" strokeType="INSIDE" width="118.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="33.0" layoutX="847.0" layoutY="506.0" stroke="BLACK" strokeType="INSIDE" width="288.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="312.0" layoutX="1068.0" layoutY="196.0" stroke="BLACK" strokeType="INSIDE" width="27.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="16.0" layoutX="872.0" layoutY="188.0" stroke="BLACK" strokeType="INSIDE" width="239.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="63.0" layoutX="357.0" layoutY="274.0" opacity="0.54" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="339.0" />
       <Label fx:id="mot" alignment="TOP_CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="359.0" layoutY="274.0" prefHeight="63.0" prefWidth="333.0" textAlignment="CENTER" wrapText="true">
          <font>
@@ -123,27 +123,72 @@
             </ImageView>
          </graphic>
       </Button>
-      <ImageView fx:id="coeur2" fitHeight="56.0" fitWidth="40.0" layoutX="974.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="46.0" fitWidth="40.0" layoutX="928.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/coeurN.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="coeur3" fitHeight="56.0" fitWidth="40.0" layoutX="928.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/coeur.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="coeur3" fitHeight="56.0" fitWidth="40.0" layoutX="1014.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="46.0" fitWidth="40.0" layoutX="888.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/coeurN.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="40.0" layoutX="848.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/coeurN.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="coeur2" fitHeight="56.0" fitWidth="40.0" layoutX="888.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/coeur.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="coeur4" fitHeight="56.0" fitWidth="40.0" layoutX="1054.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="46.0" fitWidth="40.0" layoutX="1088.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/coeurN.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="40.0" layoutX="1048.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/coeurN.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="40.0" layoutX="1008.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/coeurN.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="coeur5" fitHeight="56.0" fitWidth="40.0" layoutX="1008.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/coeur.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="coeur5" fitHeight="56.0" fitWidth="40.0" layoutX="1094.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="46.0" fitWidth="40.0" layoutX="968.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/coeurN.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="coeur1" fitHeight="56.0" fitWidth="40.0" layoutX="848.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/coeur.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="coeur1" fitHeight="56.0" fitWidth="40.0" layoutX="934.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="coeur6" fitHeight="56.0" fitWidth="40.0" layoutX="1048.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/coeur.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="coeur4" fitHeight="56.0" fitWidth="40.0" layoutX="968.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/coeur.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="coeur7" fitHeight="56.0" fitWidth="40.0" layoutX="1088.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/coeur.png" />
          </image>

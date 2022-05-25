@@ -1,6 +1,7 @@
 package application;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,9 +9,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
+import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
 import javafx.scene.layout.AnchorPane;
 
 public class IntroductionController extends ButtonController {
+private int police ;
+	
+	public int getPolice() {
+		return police;
+	}
+	@FXML Label LABELTEST;
+	@FXML Slider slider;
 	
 	 
 	@FXML public void initialize() {}
@@ -41,7 +51,9 @@ public class IntroductionController extends ButtonController {
 		dialog.show();
 		
 	}
-	
+	public void apply() {
+		System.out.println("apply merci");
+	}
 	@FXML
 	public void ouvrirOption(ActionEvent event) throws IOException {
 		
@@ -49,7 +61,6 @@ public class IntroductionController extends ButtonController {
         optionController optionController = new optionController();
         loader.setController(optionController);
         AnchorPane support = loader.load();
-	
         Dialog<ButtonType> dialog = new Dialog<>();
         dialog.setTitle("Support");
         dialog.getDialogPane().setContent(support);
@@ -57,7 +68,10 @@ public class IntroductionController extends ButtonController {
         ButtonType buttonApply = new ButtonType("Appliquer", ButtonData.APPLY);
         ButtonType buttonCancel = new ButtonType("Retour", ButtonData.CANCEL_CLOSE);
 		dialog.getDialogPane().getButtonTypes().addAll(buttonApply, buttonCancel);
-		
+		Optional<ButtonType> choice = dialog.showAndWait();
+		if(choice.get() == buttonApply) {
+			apply();
+		}
 		dialog.show();
 		
 	}
