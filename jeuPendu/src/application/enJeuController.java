@@ -28,6 +28,9 @@ public class enJeuController extends ButtonController{
 	@FXML ImageView coeur3;
 	@FXML ImageView coeur4;
 	@FXML ImageView coeur5;
+	@FXML ImageView coeur6;
+	@FXML ImageView coeur7;
+
 	
 
 
@@ -105,8 +108,8 @@ public class enJeuController extends ButtonController{
 	}
 	
 	@FXML public void initialize() {
-		jeu.setNbMaxErreurs(7);
-		info.setText("Salut Cowboy, prêt à jouer? Appuie sur une lettre pour commencer!"+ jeu.getMotMystere());
+		jeu.setNbMaxErreurs(6);
+		info.setText("Salut Cowboy, prêt à jouer? Appuie sur une lettre pour commencer!");
 		mot.setText(addSpace(toUnderScore(jeu.getMotMystere())));
 		corde.setVisible(false);
 		jambe1.setVisible(false);
@@ -130,8 +133,8 @@ public class enJeuController extends ButtonController{
 			case 3: corp.setVisible(true);coeur3.setVisible(false); break;
 			case 4: jambe1.setVisible(true);coeur4.setVisible(false); break;
 			case 5 : jambe2.setVisible(true); coeur5.setVisible(false);break;
-			//case 6 : bras1.setVisible(true);coeur6.setVisible(false); break;
-			//case 7 : bras2.setVisible(true); coeur7.setVisible(false);break;
+			case 6 : bras1.setVisible(true);coeur6.setVisible(false); break;
+			case 7 : bras2.setVisible(true); coeur7.setVisible(false);break;
 		}
 	}
 	

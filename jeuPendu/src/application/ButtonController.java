@@ -82,6 +82,7 @@ public class ButtonController {
 		stage.setScene(scene);
 	}
 	
+	
 	public void fin(ActionEvent event) throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("fin.fxml"));
 		finController fin = new finController(jeu,option);
