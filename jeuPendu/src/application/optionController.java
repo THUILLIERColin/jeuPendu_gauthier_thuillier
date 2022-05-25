@@ -6,12 +6,18 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 
-public class optionController extends ButtonController{
+public class optionController {
+	
 	@FXML Slider slider;
 	@FXML Button test;
 	@FXML Label labelPolice;
@@ -35,15 +41,15 @@ public class optionController extends ButtonController{
 		});		
 	}
 	
-	public optionController() {	
-		
-	}
-	public void applyChanges(ActionEvent event) {
-		//label.	
-	}
+	public optionController() {	}
+	
 	public void setWesternTheme(ActionEvent event) throws IOException {
 		westernTheme.setSelected(true);
 		futuristeTheme.setSelected(false);
+	}
+	
+	public boolean getWesternTheme(){
+		return westernTheme.isSelected();
 	}
 	
 	 
@@ -52,6 +58,9 @@ public class optionController extends ButtonController{
 		futuristeTheme.setSelected(true);
 	}
 
+	public boolean getFutirusteTheme(){
+		return futuristeTheme.isSelected();
+	}
 	
 	
 	

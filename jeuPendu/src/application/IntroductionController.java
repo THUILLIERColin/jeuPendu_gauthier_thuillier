@@ -6,24 +6,13 @@ import java.util.Optional;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
-import javafx.scene.control.Label;
-import javafx.scene.control.Slider;
 import javafx.scene.layout.AnchorPane;
 
 public class IntroductionController extends ButtonController {
-private int police ;
 	
-	public int getPolice() {
-		return police;
-	}
-	@FXML Label LABELTEST;
-	@FXML Slider slider;
-	@FXML Button applyButton;
-	 
 	@FXML public void initialize() {}
 	 
 	public IntroductionController() {
@@ -53,24 +42,32 @@ private int police ;
 		
 	}
 	
-	/*public void applyChanges(ActionEvent event) {
-		//System.out.println("applyyyyyy");
-	}*/
 	@FXML
 	public void ouvrirOption(ActionEvent event) throws IOException {
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("option.fxml"));
         optionController optionController = new optionController();
         loader.setController(optionController);
-        AnchorPane support = loader.load();
-        Dialog<ButtonType> dialog = new Dialog<>();
+        AnchorPane support = loader.load(); 
+        Dialog<ButtonType> dialog = new Dialog<ButtonType>();
         dialog.setTitle("Support");
         dialog.getDialogPane().setContent(support);
         
-        dialog.show();
+        ButtonType buttonApply = new ButtonType("Appliquer", ButtonData.APPLY);
+        ButtonType buttonCancel = new ButtonType("Retour", ButtonData.CANCEL_CLOSE);
+		dialog.getDialogPane().getButtonTypes().addAll(buttonApply, buttonCancel);
 		
+		Optional<ButtonType> choice = dialog.showAndWait();
 		
+		if(choice.get() == buttonApply){
+			GestionOption option =super.getOption();
+			if(optionController.getWesternTheme())
+				option.themeWestern();
+			else 
+				option.themeFuturiste();
+		}
+		else{
+			dialog.close();
+		}
 	}
-		
-
 }

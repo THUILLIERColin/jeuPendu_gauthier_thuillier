@@ -32,12 +32,16 @@ public class ButtonController {
 	
  @FXML public void initialize() {}
 	 
-	 public ButtonController() {
-		 
-	 }
+	 public ButtonController() {}
+	 
 	 public GestionJeu getJeu() {
 		 return jeu;
 	 }
+	 
+	 public GestionOption getOption() {
+		return option;
+	 }
+	 
 	public ButtonController(GestionJeu jeu,GestionOption option) {
 			 this.jeu = jeu;
 			 this.option = option;
@@ -61,6 +65,7 @@ public class ButtonController {
 		stage.setTitle("Voici le jeu du pendu");
 		stage.setScene(scene);
 	}
+	
 	public void recommencerPartie(ActionEvent event) throws IOException {
 		lancerPartie(event);
 	}
@@ -69,6 +74,7 @@ public class ButtonController {
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		stage.close();
 	}
+	
 	public void acceuil(ActionEvent event) throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("introduction.fxml"));
 		IntroductionController intro = new IntroductionController(jeu,option);

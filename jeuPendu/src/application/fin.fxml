@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" styleClass="bodybg3" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" styleClass="FinWestern" stylesheets="@western.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="reco" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="25.0" layoutY="23.0" maxHeight="54.0" maxWidth="166.0" minHeight="52.0" minWidth="136.0" mnemonicParsing="false" onAction="#recommencerPartie" prefHeight="54.0" prefWidth="166.0">
          <graphic>
