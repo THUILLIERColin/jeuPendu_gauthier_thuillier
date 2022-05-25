@@ -11,11 +11,11 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 
-public class optionController {
+public class optionController extends ButtonController{
 	@FXML Slider slider;
 	@FXML Button test;
 	@FXML Label labelPolice;
-	String police;
+	private String police;
 	
 	@FXML private CheckBox westernTheme = new CheckBox("western");
 	@FXML private CheckBox futuristeTheme = new CheckBox("futur");
@@ -39,8 +39,7 @@ public class optionController {
 		
 	}
 	public void applyChanges(ActionEvent event) {
-		System.out.println(slider.getValue());
-		
+		//label.	
 	}
 	public void setWesternTheme(ActionEvent event) throws IOException {
 		westernTheme.setSelected(true);

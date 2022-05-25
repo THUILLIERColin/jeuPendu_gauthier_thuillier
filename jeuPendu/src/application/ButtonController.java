@@ -69,7 +69,6 @@ public class ButtonController {
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		stage.close();
 	}
-	
 	public void acceuil(ActionEvent event) throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("introduction.fxml"));
 		IntroductionController intro = new IntroductionController(jeu,option);

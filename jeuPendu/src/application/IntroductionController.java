@@ -67,13 +67,8 @@ private int police ;
         dialog.setTitle("Support");
         dialog.getDialogPane().setContent(support);
         
-        ButtonType buttonApply = new ButtonType("Appliquer", ButtonData.APPLY);
-        ButtonType buttonCancel = new ButtonType("Retour", ButtonData.CANCEL_CLOSE);
-		dialog.getDialogPane().getButtonTypes().addAll(buttonApply, buttonCancel);
-		Optional<ButtonType> choice = dialog.showAndWait();
-		if(choice.get() == buttonApply) {
-		}
-		dialog.show();
+        dialog.show();
+		
 		
 	}
 		
