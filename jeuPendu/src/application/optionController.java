@@ -4,19 +4,18 @@ import java.io.IOException;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
-import javafx.stage.Stage;
-import javafx.stage.Window;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 
-public class optionController {
+public class optionController extends ButtonController{
 	
 	@FXML Slider slider;
 	@FXML Button test;
@@ -26,10 +25,21 @@ public class optionController {
 	@FXML private CheckBox westernTheme = new CheckBox("western");
 	@FXML private CheckBox futuristeTheme = new CheckBox("futur");
 	
+	ObservableList<String> difficulty = FXCollections.observableArrayList("Facile", "Moyen", "Difficile");
+    @FXML private Spinner<String> spinneurDifficulty;
+
+	
 	@FXML public void initialize() {
+		// Theme box
 		westernTheme.setSelected(true);
 		futuristeTheme.setSelected(false);
 		
+		// Spinner (Difficulte)
+		SpinnerValueFactory<String> valueFactory = new SpinnerValueFactory.ListSpinnerValueFactory<String>(difficulty);
+	    valueFactory.setValue("Moyen");
+	    spinneurDifficulty.setValueFactory(valueFactory);
+		
+	    // Slider (taille police)
 		slider.valueProperty().addListener(new ChangeListener<Number>() {
 
 			@Override
@@ -41,7 +51,10 @@ public class optionController {
 		});		
 	}
 	
-	public optionController() {	}
+	 	
+	public optionController(GestionJeu jeu, GestionOption option) {
+		super(jeu,option);
+	}
 	
 	public void setWesternTheme(ActionEvent event) throws IOException {
 		westernTheme.setSelected(true);
@@ -60,6 +73,10 @@ public class optionController {
 
 	public boolean getFutirusteTheme(){
 		return futuristeTheme.isSelected();
+	}
+	
+	public String getDifficulty() {
+		return spinneurDifficulty.getValue();
 	}
 	
 	

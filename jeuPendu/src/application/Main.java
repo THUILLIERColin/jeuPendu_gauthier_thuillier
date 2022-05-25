@@ -15,7 +15,7 @@ public class Main extends Application {
 	@Override 
 	public void init(){
 		try {
-			this.jeu = new GestionJeu("Dictionnaires/Dico.txt");
+			this.jeu = new GestionJeu("Dictionnaires/DicoMoyen.txt");
 			this.option = new GestionOption();
 			
 		}

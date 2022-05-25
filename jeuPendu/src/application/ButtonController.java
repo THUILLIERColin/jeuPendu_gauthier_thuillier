@@ -38,7 +38,7 @@ public class ButtonController {
 		 return jeu;
 	 }
 	 
-	 public GestionOption getOption() {
+	 public GestionOption getGestionOption() {
 		return option;
 	 }
 	 
