@@ -20,6 +20,7 @@ public class ButtonController {
 	private Pane root;
 	private GestionOption option;
 	private GestionJeu jeu;
+	
 	@FXML Label rep;
 	@FXML Button fin;
 	@FXML Button reco;
@@ -34,23 +35,14 @@ public class ButtonController {
 	 
 	 public ButtonController() {}
 	 
-	 public GestionJeu getJeu() {
-		 return jeu;
-	 }
-	 
-	 public GestionOption getGestionOption() {
-		return option;
-	 }
-	 
+	
 	public ButtonController(GestionJeu jeu,GestionOption option) {
 			 this.jeu = jeu;
 			 this.option = option;
 	 }
-	 
-	public ButtonController(GestionJeu jeu) {
-		this.jeu=jeu;
-	}
 	
+	 public GestionOption getGestionOption() {return option;}
+		 
 	public GestionJeu getGestionJeu() { return jeu;}
 	
 
@@ -100,5 +92,20 @@ public class ButtonController {
 		stage.setTitle("Fin du jeu");
 		stage.setScene(scene);
 	}
+	
+	public Stage getStage() {
+		return stage;
+	}
+	
+	public Pane getRoot() {
+		return root;
+	}
+	
+	public void setStage() {
+		
+	}
 
+	public void setRoot() {
+		
+	}
 }

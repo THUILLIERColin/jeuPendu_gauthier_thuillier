@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" styleClass="FinWestern" stylesheets="@western.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" styleClass="FinWestern" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="reco" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="25.0" layoutY="23.0" maxHeight="54.0" maxWidth="166.0" minHeight="52.0" minWidth="136.0" mnemonicParsing="false" onAction="#recommencerPartie" prefHeight="54.0" prefWidth="166.0">
          <graphic>
@@ -46,7 +46,7 @@
          <font>
             <Font name="Agency FB" size="34.0" />
          </font></Label>
-      <Label fx:id="labelMotMystere" layoutX="527.0" layoutY="252.0" prefHeight="45.0" prefWidth="295.0" styleClass="ouest" stylesheets="@western.css" textFill="RED">
+      <Label fx:id="labelMotMystere" layoutX="369.0" layoutY="313.0" prefHeight="45.0" prefWidth="295.0" styleClass="ouest" stylesheets="@western.css" textFill="RED">
          <font>
             <Font name="Agency FB Bold" size="36.0" />
          </font></Label>

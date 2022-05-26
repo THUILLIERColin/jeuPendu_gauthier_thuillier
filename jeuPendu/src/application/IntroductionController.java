@@ -62,10 +62,15 @@ public class IntroductionController extends ButtonController {
 		dialog.getDialogPane().getButtonTypes().addAll(buttonApply, buttonCancel);
 		
 		Optional<ButtonType> choice = dialog.showAndWait();
-		
+				
 		if(choice.get() == buttonApply){
 			GestionOption option =super.getGestionOption();
 			GestionJeu jeu = super.getGestionJeu();
+			support.getStyleClass().clear();
+			support.getStyleClass().add("IntroFutur");
+			/*
+			super.getRoot().getStyleClass().clear();
+			super.getRoot().getStyleClass().add("InteoFutur");*/
 			
 			//Choix du theme 
 			if(optionController.getWesternTheme())option.themeWestern();

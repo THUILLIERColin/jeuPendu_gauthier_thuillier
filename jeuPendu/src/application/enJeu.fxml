@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" styleClass="EnJeuWestern" stylesheets="@western.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" styleClass="EnJeuWestern" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="101.0" layoutX="282.0" layoutY="118.0" opacity="0.54" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="437.0" />
       <Label fx:id="info" layoutX="283.0" layoutY="120.0" prefHeight="101.0" prefWidth="437.0" wrapText="true">
