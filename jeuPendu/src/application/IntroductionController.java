@@ -3,25 +3,19 @@ package application;
 import java.io.IOException;
 import java.util.Optional;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.layout.AnchorPane;
 
 public class IntroductionController extends ButtonController {
 	
 	@FXML public void initialize() {}
 	 
-	public IntroductionController() {
-		
-	}
+	public IntroductionController() {}
 	 
 	public IntroductionController(GestionJeu jeu, GestionOption option) {
 		super(jeu, option);
@@ -34,7 +28,7 @@ public class IntroductionController extends ButtonController {
         supportController supportController = new supportController();
         loader.setController(supportController);
         AnchorPane support = loader.load();
-	
+        
         Dialog<ButtonType> dialog = new Dialog<>();
         dialog.setTitle("Support");
         dialog.getDialogPane().setContent(support);
@@ -45,6 +39,7 @@ public class IntroductionController extends ButtonController {
 		dialog.show();
 		
 	}
+	
 	
 	@FXML
 	public void ouvrirOption(ActionEvent event) throws IOException {
@@ -65,21 +60,14 @@ public class IntroductionController extends ButtonController {
 				
 		if(choice.get() == buttonApply){
 			GestionOption option =super.getGestionOption();
-			GestionJeu jeu = super.getGestionJeu();
-			support.getStyleClass().clear();
-			support.getStyleClass().add("IntroFutur");
-			/*
-			super.getRoot().getStyleClass().clear();
-			super.getRoot().getStyleClass().add("InteoFutur");*/
-			
+						
 			//Choix du theme 
-			if(optionController.getWesternTheme())option.themeWestern();
-			else option.themeFuturiste();
+			if(optionController.getWesternTheme())option.setTheme("Western");
+			else option.setTheme("Futur");
 			
 			// Choix du dico
-			if(optionController.getDifficulty()=="Facile")jeu.ChangerDico("Dictionnaires/DicoFacile.txt");
-			else if(optionController.getDifficulty()=="Moyen")jeu.ChangerDico("Dictionnaires/DicoMoyen.txt");
-			else if(optionController.getDifficulty()=="Difficile")jeu.ChangerDico("Dictionnaires/DicoDifficile.txt");
+			option.setDifficulty((optionController.getDifficulty()));
+			option.changeDifficulty();
 		}
 		else{
 			dialog.close();

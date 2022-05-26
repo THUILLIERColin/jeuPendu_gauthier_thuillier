@@ -47,7 +47,7 @@ public class optionController extends ButtonController{
 				police = Integer.toString((int)slider.getValue()+10);
 				labelPolice.setStyle("-fx-font: " +  police +" arial;" );
 				
-			}			
+			}
 		});		
 	}
 	

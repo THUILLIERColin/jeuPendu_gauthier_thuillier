@@ -17,7 +17,7 @@ public class ButtonController {
 	
 	private Stage stage;
 	private Scene scene;
-	private Pane root;
+	protected Pane root;
 	private GestionOption option;
 	private GestionJeu jeu;
 	
@@ -72,6 +72,8 @@ public class ButtonController {
 		IntroductionController intro = new IntroductionController(jeu,option);
 		loader.setController(intro);
 		root = loader.load();
+		if(option.getTheme()=="Futur") root.setBackground(option.MAJIntroFuturiste());
+		else root.setBackground(option.MAJIntroWestern());
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root,1300,700);
 		stage.setTitle("Introduction");
@@ -91,21 +93,5 @@ public class ButtonController {
 		scene = new Scene(root,1300,700);
 		stage.setTitle("Fin du jeu");
 		stage.setScene(scene);
-	}
-	
-	public Stage getStage() {
-		return stage;
-	}
-	
-	public Pane getRoot() {
-		return root;
-	}
-	
-	public void setStage() {
-		
-	}
-
-	public void setRoot() {
-		
 	}
 }

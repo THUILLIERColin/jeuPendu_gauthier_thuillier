@@ -60,7 +60,7 @@ public class enJeuController extends ButtonController{
 	@FXML Button y;
 	@FXML Button z;
 
-	private GestionJeu jeu = getJeu();
+	private GestionJeu jeu = getGestionJeu();
 	private Vector <Integer> pos = new Vector <Integer>();
 	
 	public String toUnderScore(String mot) {

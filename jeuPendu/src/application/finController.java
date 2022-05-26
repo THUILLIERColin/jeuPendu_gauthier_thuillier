@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 public class finController extends ButtonController{
 	
-	GestionJeu jeu = getJeu();
+	GestionJeu jeu = getGestionJeu();
 	private String motMystere = jeu.getMotMystere();
 	@FXML Label labelMotMystere;
 	@FXML Label labelMessageFin;
