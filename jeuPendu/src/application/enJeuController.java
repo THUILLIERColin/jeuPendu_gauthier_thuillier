@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 import java.util.Vector;
 
+import application.Main.Theme;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -109,7 +110,10 @@ public class enJeuController extends ButtonController{
 	
 	@FXML public void initialize() {
 		jeu.setNbMaxErreurs(6);
-		info.setText("Salut Cowboy, prêt à jouer? Appuie sur une lettre pour commencer!");
+		if( getGestionOption().getTheme() == Theme.WESTERN)
+			info.setText("Salut Cowboy, prêt à jouer? Appuie sur une lettre pour commencer!");
+		else
+			info.setText("Commandant, prêt à jouer? Appuie sur une lettre pour commencer!");
 		mot.setText(addSpace(toUnderScore(jeu.getMotMystere())));
 		corde.setVisible(false);
 		jambe1.setVisible(false);
@@ -148,11 +152,17 @@ public class enJeuController extends ButtonController{
 	        	
 	        	 if(!jeu.getMotMystere().contains(lettre)) {
 	                 if(jeu.getLettresDejaDonnees().contains(lettre))
+	                	 if( getGestionOption().getTheme() == Theme.FUTURISTE)
+	             			info.setText("Blip Bloup Colonel n'essayez pas d'autre lettres vous allez crasher le vaisseau!");
+	             		else
 	                 	info.setText("Tu as déjà essayé pied tendre!");
 	                 else {
 	                 	jeu.setLettresDejaDonnees(lettre+ jeu.getLettresDejaDonnees());
 	                 	jeu.MAJNbErreurs();
 	                	 ((Node) event.getSource()).setStyle("-fx-base: #FF0000;");
+	                	 if( getGestionOption().getTheme() == Theme.FUTURISTE)
+		             			info.setText("Mauvaise lettre intergalactique... essayez encore Amiral");
+		             		else
 	                	 info.setText("Mauvaise lettre Cowboy!");
 
 	                	 erreur();
@@ -165,6 +175,9 @@ public class enJeuController extends ButtonController{
 		                 else {
 		                 	jeu.setLettresDejaDonnees(lettre+ jeu.getLettresDejaDonnees());
 		                	 ((Node) event.getSource()).setStyle("-fx-base: #00FF00;");
+		                	 if( getGestionOption().getTheme() == Theme.FUTURISTE)
+			             			info.setText("Bravo Amiral!");
+			             		else
 		                	 info.setText("Bonne lettre Cowboy!");
 		                	 mot.setText( addSpace(addLettreUnderscore(lettre)));
 		                 }
