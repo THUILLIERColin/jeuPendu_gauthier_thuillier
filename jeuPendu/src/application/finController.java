@@ -20,7 +20,7 @@ public class finController extends ButtonController{
 			if( getGestionOption().getTheme() == Theme.FUTURISTE)
      			labelMessageFin.setText("Amiral vous avez perdu les aliens nous ont attrapés...");
      		else
-			labelMessageFin.setText("Aie aie cowboy tu as perdu..");
+			labelMessageFin.setText("Aie aie cowboy tu as perdu.."); 
 		else
 			if( getGestionOption().getTheme() == Theme.FUTURISTE)
      			labelMessageFin.setText("Blip Bloup Amiral vous avez gagné et conquis l'univers");

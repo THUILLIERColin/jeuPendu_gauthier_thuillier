@@ -35,7 +35,7 @@ public class optionController extends ButtonController{
 		if(super.getGestionOption().getTheme()==Theme.WESTERN) {
 			westernChoice.setSelected(true);
 			futuristeChoice.setSelected(false);
-		}
+		} 
 		else {
 			westernChoice.setSelected(false);
 			futuristeChoice.setSelected(true);

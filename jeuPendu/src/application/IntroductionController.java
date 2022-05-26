@@ -27,7 +27,7 @@ public class IntroductionController extends ButtonController {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("support.fxml"));
         supportController supportController = new supportController();
         loader.setController(supportController);
-        AnchorPane support = loader.load();
+        AnchorPane support = loader.load(); 
         
         Dialog<ButtonType> dialog = new Dialog<>();
         dialog.setTitle("Support");

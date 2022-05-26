@@ -28,7 +28,7 @@ public class GestionOption{
 	public void changeDifficulty() throws IOException {
 		if(difficulty=="Facile")jeu.ChangerDico("Dictionnaires/DicoFacile.txt");
 		else if(difficulty=="Moyen")jeu.ChangerDico("Dictionnaires/DicoMoyen.txt");
-		else if(difficulty=="Difficile")jeu.ChangerDico("Dictionnaires/DicoDifficile.txt");
+		else if(difficulty=="Difficile")jeu.ChangerDico("Dictionnaires/DicoDifficile.txt"); 
 	}
 	
 	public void setTheme(Theme theme) {

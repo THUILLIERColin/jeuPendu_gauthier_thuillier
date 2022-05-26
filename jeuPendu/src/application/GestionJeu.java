@@ -28,7 +28,7 @@ public class GestionJeu {
     //nombre d'erreurs déjà commises par le joueur
 	private int nbErreurs;
 
-	//générateur de nombre aléatoire
+	//générateur de nombre aléatoire 
 	private Random alea; 
 	
 	//Nom du joueur
