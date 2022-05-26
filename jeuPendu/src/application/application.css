@@ -20,11 +20,12 @@
 	-fx-background-image: url("../images/optionWestern.png") ;
      -fx-background-size: 100% 100%;
 }
-.label{
-
-}
 
 .IntroFutur{
     -fx-background-image: url("../images/IntroFutur.png") ;
      -fx-background-size: 100% 100%;
+}
+
+.label{
+
 }

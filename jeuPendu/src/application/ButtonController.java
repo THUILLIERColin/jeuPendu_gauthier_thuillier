@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 
+import application.Main.Theme;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -52,6 +53,11 @@ public class ButtonController {
 		enJeuController enJeu = new enJeuController(jeu,option);
 		loader.setController(enJeu);
 		root = loader.load();
+		
+		// Background
+		if(option.getTheme()==Theme.FUTURISTE) root.setBackground(option.MAJEnJeuFuturiste());
+		else root.setBackground(option.MAJEnJeuWestern());
+				
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root,1300,700);
 		stage.setTitle("Voici le jeu du pendu");
@@ -72,16 +78,17 @@ public class ButtonController {
 		IntroductionController intro = new IntroductionController(jeu,option);
 		loader.setController(intro);
 		root = loader.load();
-		if(option.getTheme()=="Futur") root.setBackground(option.MAJIntroFuturiste());
-		else root.setBackground(option.MAJIntroWestern());
+		
+		// Background
+		if(option.getTheme()==Theme.FUTURISTE) root.setBackground(option.MAJAccueilFuturiste());
+		else root.setBackground(option.MAJAccueilWestern());
+		
+		option.setRoot(root);
+		
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root,1300,700);
 		stage.setTitle("Introduction");
 		stage.setScene(scene);
-	}
-	
-	public void applyChanges(ActionEvent event) {
-		System.out.println("applyyyyyy");
 	}
 	
 	public void fin(ActionEvent event) throws IOException {
@@ -89,9 +96,15 @@ public class ButtonController {
 		finController fin = new finController(jeu,option);
 		loader.setController(fin);
 		root = loader.load();
+		
+		// Background 
+		if(option.getTheme()==Theme.FUTURISTE) root.setBackground(option.MAJFinFuturiste());
+		else root.setBackground(option.MAJFinWestern());
+		
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root,1300,700);
 		stage.setTitle("Fin du jeu");
 		stage.setScene(scene);
 	}
+
 }

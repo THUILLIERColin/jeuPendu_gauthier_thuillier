@@ -32,12 +32,12 @@
       </Label>
       <Spinner fx:id="spinneurDifficulty" layoutX="562.0" layoutY="177.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6b6b6b" height="95.0" layoutX="334.0" layoutY="317.0" stroke="#ffffff00" strokeType="INSIDE" width="166.0" />
-      <CheckBox fx:id="westernTheme" layoutX="358.0" layoutY="324.0" mnemonicParsing="false" onAction="#setWesternTheme" text="Western" textFill="WHITE">
+      <CheckBox fx:id="westernChoice" layoutX="358.0" layoutY="324.0" mnemonicParsing="false" onAction="#setWesternChoice" text="Western" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </CheckBox>
-      <CheckBox fx:id="futuristeTheme" layoutX="358.0" layoutY="368.0" mnemonicParsing="false" onAction="#setFuturisteTheme" text="Futuriste" textFill="WHITE">
+      <CheckBox fx:id="futuristeChoice" layoutX="358.0" layoutY="368.0" mnemonicParsing="false" onAction="#setFuturisteChoice" text="Futuriste" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>

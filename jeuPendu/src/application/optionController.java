@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 
+import application.Main.Theme;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -22,8 +23,8 @@ public class optionController extends ButtonController{
 	@FXML Label labelPolice;
 	private String police;
 	
-	@FXML private CheckBox westernTheme = new CheckBox("western");
-	@FXML private CheckBox futuristeTheme = new CheckBox("futur");
+	@FXML private CheckBox westernChoice = new CheckBox("Western");
+	@FXML private CheckBox futuristeChoice = new CheckBox("Futur");
 	
 	ObservableList<String> difficulty = FXCollections.observableArrayList("Facile", "Moyen", "Difficile");
     @FXML private Spinner<String> spinneurDifficulty;
@@ -31,8 +32,15 @@ public class optionController extends ButtonController{
 	
 	@FXML public void initialize() {
 		// Theme box
-		westernTheme.setSelected(true);
-		futuristeTheme.setSelected(false);
+		if(super.getGestionOption().getTheme()==Theme.WESTERN) {
+			westernChoice.setSelected(true);
+			futuristeChoice.setSelected(false);
+		}
+		else {
+			westernChoice.setSelected(false);
+			futuristeChoice.setSelected(true);
+		}
+		
 		
 		// Spinner (Difficulte)
 		SpinnerValueFactory<String> valueFactory = new SpinnerValueFactory.ListSpinnerValueFactory<String>(difficulty);
@@ -56,23 +64,28 @@ public class optionController extends ButtonController{
 		super(jeu,option);
 	}
 	
-	public void setWesternTheme(ActionEvent event) throws IOException {
-		westernTheme.setSelected(true);
-		futuristeTheme.setSelected(false);
+	public void setWesternChoice(ActionEvent event) throws IOException {
+		westernChoice.setSelected(true);
+		futuristeChoice.setSelected(false);
 	}
 	
-	public boolean getWesternTheme(){
-		return westernTheme.isSelected();
+	public boolean getWesternChoice(){
+		return westernChoice.isSelected();
 	}
 	
 	 
-	public void setFuturisteTheme(ActionEvent event) throws IOException {
-		westernTheme.setSelected(false);
-		futuristeTheme.setSelected(true);
+	public void setFuturisteChoice(ActionEvent event) throws IOException {
+		westernChoice.setSelected(false);
+		futuristeChoice.setSelected(true);
 	}
 
-	public boolean getFutirusteTheme(){
-		return futuristeTheme.isSelected();
+	public boolean getFuturisteChoice(){
+		return futuristeChoice.isSelected();
+	}
+	
+	public Theme getThemeChoisi() {
+		if (westernChoice.isSelected()) return Theme.WESTERN;
+		return Theme.FUTURISTE;
 	}
 	
 	public String getDifficulty() {

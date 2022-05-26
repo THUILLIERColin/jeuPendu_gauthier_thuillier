@@ -62,8 +62,10 @@ public class IntroductionController extends ButtonController {
 			GestionOption option =super.getGestionOption();
 						
 			//Choix du theme 
-			if(optionController.getWesternTheme())option.setTheme("Western");
-			else option.setTheme("Futur");
+			if(!(optionController.getThemeChoisi()==option.getTheme())){
+				option.setTheme(optionController.getThemeChoisi());
+				option.MAJIntro(optionController.getThemeChoisi());
+			}			
 			
 			// Choix du dico
 			option.setDifficulty((optionController.getDifficulty()));

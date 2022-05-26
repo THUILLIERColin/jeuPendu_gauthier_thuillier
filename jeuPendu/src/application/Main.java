@@ -4,16 +4,14 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.BackgroundPosition;
-import javafx.scene.layout.BackgroundRepeat;
-import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.Pane;
 
 
 public class Main extends Application {
+	
+	public final static String WESTERN="Western";
+	public final static String FUTURISTE="Futur";
+	public enum Theme {WESTERN, FUTURISTE };
 	
 	private GestionJeu jeu;
 	private GestionOption option;
@@ -23,6 +21,7 @@ public class Main extends Application {
 		try {
 			this.jeu = new GestionJeu("Dictionnaires/DicoMoyen.txt");
 			this.option = new GestionOption(jeu);
+			option.setTheme(Theme.WESTERN);
 			
 		}
 		catch(Exception e) {
@@ -40,7 +39,8 @@ public class Main extends Application {
 		  Pane root = loader.load();
 		  
 		  // Background
-		  root.setBackground(option.MAJIntroWestern());
+		  root.setBackground(option.MAJAccueilWestern());
+		  option.setRoot(root);
 		  
 		  Scene scene = new Scene(root,1300,700);
 		  stage.setTitle("Intoduction");
