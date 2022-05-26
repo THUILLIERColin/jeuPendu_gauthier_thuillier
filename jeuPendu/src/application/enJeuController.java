@@ -170,6 +170,9 @@ public class enJeuController extends ButtonController{
 	        	 }
 	        	 else {
 	        		 if(jeu.getLettresDejaDonnees().contains(lettre)) {
+	        			 if( getGestionOption().getTheme() == Theme.FUTURISTE)
+		             			info.setText("Blip Bloup Amiral n'essayez pas les mêmes lettres vous allez crasher le vaisseau!");
+		             		else
 	        				                 	info.setText("Tu as déjà essayé pied tendre!");
 	        		 }
 		                 else {
