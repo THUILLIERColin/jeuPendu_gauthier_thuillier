@@ -155,7 +155,7 @@ public class enJeuController extends ButtonController{
 	                	 if( getGestionOption().getTheme() == Theme.FUTURISTE)
 	             			info.setText("Blip Bloup Colonel n'essayez pas d'autre lettres vous allez crasher le vaisseau!");
 	             		else
-	                 	info.setText("Tu as déjà essayé pied tendre!");
+	             			info.setText("Tu as déjà essayé pied tendre!");
 	                 else {
 	                 	jeu.setLettresDejaDonnees(lettre+ jeu.getLettresDejaDonnees());
 	                 	jeu.MAJNbErreurs();
