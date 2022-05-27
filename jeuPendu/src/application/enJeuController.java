@@ -17,7 +17,8 @@ public class enJeuController extends ButtonController{
 	@FXML Label mot;
 
 	@FXML ImageView corde;
-	@FXML ImageView tete;
+	@FXML ImageView teteChapo;
+	@FXML ImageView teteCasque;
 	@FXML ImageView corp;
 	@FXML ImageView bras1;
 	@FXML ImageView bras2;
@@ -109,6 +110,9 @@ public class enJeuController extends ButtonController{
 	}
 	
 	@FXML public void initialize() {
+		
+		mot.setStyle("-fx-font-size :"+Integer.toString(38+super.getGestionOption().getMultPolice()) + " Arial;");
+		info.setStyle("-fx-font-size :"+Integer.toString(27+super.getGestionOption().getMultPolice()) + " Arial;");
 		jeu.setNbMaxErreurs(6);
 		if( getGestionOption().getTheme() == Theme.WESTERN)
 			info.setText("Salut Cowboy, prêt à jouer? Appuie sur une lettre pour commencer!");
@@ -120,20 +124,29 @@ public class enJeuController extends ButtonController{
 		jambe2.setVisible(false);
 		bras1.setVisible(false);
 		bras2.setVisible(false);
-		tete.setVisible(false);
+		teteChapo.setVisible(false);
+		teteCasque.setVisible(false);
 		corp.setVisible(false);
 		coeur1.setVisible(true);
 		coeur2.setVisible(true);
 		coeur3.setVisible(true);
 		coeur4.setVisible(true);
 		coeur5.setVisible(true);
+	
 		
 	}
 	
 	public void erreur() {
 		switch(jeu.getNbErreurs()) {
 			case 1: corde.setVisible(true);coeur1.setVisible(false); break;
-			case 2: tete.setVisible(true);coeur2.setVisible(false); break;
+			case 2: 
+				if(getGestionOption().getTheme()==Theme.WESTERN) {
+					teteChapo.setVisible(true);coeur2.setVisible(false);
+			
+				}
+				else	
+					teteCasque.setVisible(true);coeur2.setVisible(false);
+				break;
 			case 3: corp.setVisible(true);coeur3.setVisible(false); break;
 			case 4: jambe1.setVisible(true);coeur4.setVisible(false); break;
 			case 5 : jambe2.setVisible(true); coeur5.setVisible(false);break;
@@ -164,7 +177,6 @@ public class enJeuController extends ButtonController{
 		             			info.setText("Mauvaise lettre intergalactique... essayez encore Amiral");
 		             		else
 	                	 info.setText("Mauvaise lettre Cowboy!");
-
 	                	 erreur();
 	                 }
 	        	 }

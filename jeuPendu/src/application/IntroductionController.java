@@ -9,10 +9,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 public class IntroductionController extends ButtonController {
-	
+	@FXML Label labelIntro1;
+	@FXML Label labelIntro2;
+	@FXML Label labelIntro3;	
+	@FXML Label labelIntro4;
+	private int lastPoliceMult;
 	@FXML public void initialize() {}
 	 
 	public IntroductionController() {}
@@ -40,6 +45,13 @@ public class IntroductionController extends ButtonController {
 		
 	}
 	
+	@FXML public void setIntroLabel(int multPolice) {
+		labelIntro1.setStyle("-fx-font-size :"+Integer.toString(54+multPolice) + " Arial;");
+		labelIntro2.setStyle("-fx-font-size :"+Integer.toString(54+multPolice) + " Arial;");
+		labelIntro3.setStyle("-fx-font-size :"+Integer.toString(71+multPolice) + " Arial;");
+		labelIntro4.setStyle("-fx-font-size :"+Integer.toString(83+multPolice) + " Arial;");
+	}
+
 	
 	@FXML
 	public void ouvrirOption(ActionEvent event) throws IOException {
@@ -60,7 +72,8 @@ public class IntroductionController extends ButtonController {
 				
 		if(choice.get() == buttonApply){
 			GestionOption option =super.getGestionOption();
-						
+			setIntroLabel(optionController.getPoliceMult());
+			super.getGestionOption().setMultPolice(optionController.getPoliceMult());
 			//Choix du theme 
 			if(!(optionController.getThemeChoisi()==option.getTheme())){
 				option.setTheme(optionController.getThemeChoisi());

@@ -16,7 +16,7 @@ public class GestionOption{
 	private String difficulty;
 	private GestionJeu jeu;
 	private Theme theme;
-	
+	private int MultPolice;
 	private Pane root;
 	
 	public GestionOption(GestionJeu jeu) {this.jeu=jeu;}
@@ -24,7 +24,12 @@ public class GestionOption{
 	public void setDifficulty(String difficulty) {
 		this.difficulty=difficulty;
 	}
-	
+	public void setMultPolice(int MultPolice) {
+		this.MultPolice = MultPolice;
+	}
+	public int getMultPolice() {
+		return MultPolice;
+	}
 	public void changeDifficulty() throws IOException {
 		if(difficulty=="Facile")jeu.ChangerDico("Dictionnaires/DicoFacile.txt");
 		else if(difficulty=="Moyen")jeu.ChangerDico("Dictionnaires/DicoMoyen.txt");

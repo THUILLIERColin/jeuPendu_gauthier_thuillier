@@ -8,24 +8,24 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="700.0" maxWidth="1300.0" minHeight="700.0" minWidth="1300.0" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="700.0" maxWidth="1300.0" minHeight="700.0" minWidth="1300.0" prefHeight="700.0" prefWidth="1300.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="161.0" layoutY="58.0" prefHeight="80.0" prefWidth="293.0" text="Bienvenue" textAlignment="JUSTIFY" wrapText="true">
+      <Label fx:id="labelIntro1" layoutX="161.0" layoutY="58.0" prefHeight="105.0" prefWidth="366.0" text="Bienvenue" textAlignment="JUSTIFY" wrapText="true">
          <font>
-            <Font name="System Bold" size="54.0" />
+            <Font name="Arial" size="54.0" />
          </font>
       </Label>
-      <Label layoutX="222.0" layoutY="152.0" text="Vous allez jouer au jeu du">
+      <Label fx:id="labelIntro2" layoutX="222.0" layoutY="152.0" prefHeight="92.0" prefWidth="891.0" text="Vous allez jouer au jeu du">
          <font>
-            <Font name="System Bold Italic" size="54.0" />
+            <Font name="Arial" size="54.0" />
          </font>
       </Label>
-      <Label layoutX="856.0" layoutY="350.0" text="P E N D U" textFill="WHITE">
+      <Label fx:id="labelIntro3" layoutX="856.0" layoutY="350.0" prefHeight="104.0" prefWidth="418.0" stylesheets="@application.css" text="P E N D U" textFill="WHITE">
          <font>
             <Font size="71.0" />
          </font>
       </Label>
-      <Label layoutX="866.0" layoutY="341.0" text="_ _ _  _ _" textFill="WHITE">
+      <Label fx:id="labelIntro4" layoutX="856.0" layoutY="350.0" prefHeight="122.0" prefWidth="436.0" text="_ _ _  _ _" textFill="WHITE">
          <font>
             <Font size="83.0" />
          </font>
@@ -44,15 +44,15 @@
       </Button>
       <Button layoutX="284.0" layoutY="396.0" maxHeight="60.0" maxWidth="154.0" minHeight="60.0" minWidth="154.0" mnemonicParsing="false" onAction="#ouvrirOption" prefHeight="60.0" prefWidth="154.0">
          <graphic>
-            <ImageView fitHeight="73.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="76.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/optionIntro.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <Button layoutX="284.0" layoutY="471.0" maxHeight="60.0" maxWidth="154.0" minHeight="60.0" minWidth="154.0" mnemonicParsing="false" onAction="#ouvrirSupport" prefHeight="60.0" prefWidth="154.0">
+      <Button alignment="CENTER" layoutX="284.0" layoutY="471.0" maxHeight="60.0" maxWidth="154.0" minHeight="60.0" minWidth="154.0" mnemonicParsing="false" onAction="#ouvrirSupport" prefHeight="60.0" prefWidth="154.0">
          <graphic>
-            <ImageView fitHeight="34.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="69.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/aideIntro.png" />
                </image>

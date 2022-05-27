@@ -22,7 +22,7 @@ public class Main extends Application {
 			this.jeu = new GestionJeu("Dictionnaires/DicoMoyen.txt");
 			this.option = new GestionOption(jeu);
 			option.setTheme(Theme.WESTERN);
-			
+			option.setMultPolice(1);
 		}
 		catch(Exception e) {
 			System.err.print(e);

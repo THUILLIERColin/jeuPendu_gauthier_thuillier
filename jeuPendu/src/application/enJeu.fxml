@@ -11,8 +11,8 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="101.0" layoutX="282.0" layoutY="118.0" opacity="0.54" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="437.0" />
-      <Label fx:id="info" layoutX="283.0" layoutY="120.0" prefHeight="101.0" prefWidth="437.0" wrapText="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="161.0" layoutX="169.0" layoutY="95.0" opacity="0.54" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="662.0" />
+      <Label fx:id="info" layoutX="173.0" layoutY="95.0" prefHeight="161.0" prefWidth="656.0" wrapText="true">
          <font>
             <Font name="Agency FB Bold" size="27.0" />
          </font>
@@ -24,7 +24,7 @@
             <Image url="@../images/corde.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="tete" fitHeight="304.0" fitWidth="304.0" layoutX="824.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="teteChapo" fitHeight="304.0" fitWidth="304.0" layoutX="824.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/tete.png" />
          </image>
@@ -81,8 +81,8 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="33.0" layoutX="847.0" layoutY="506.0" stroke="BLACK" strokeType="INSIDE" width="288.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="312.0" layoutX="1068.0" layoutY="196.0" stroke="BLACK" strokeType="INSIDE" width="27.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="16.0" layoutX="872.0" layoutY="188.0" stroke="BLACK" strokeType="INSIDE" width="239.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="63.0" layoutX="357.0" layoutY="274.0" opacity="0.54" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="339.0" />
-      <Label fx:id="mot" alignment="TOP_CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="359.0" layoutY="274.0" prefHeight="63.0" prefWidth="333.0" textAlignment="CENTER" wrapText="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="88.0" layoutX="259.0" layoutY="264.0" opacity="0.54" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="463.0" />
+      <Label fx:id="mot" alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="259.0" layoutY="264.0" prefHeight="88.0" prefWidth="463.0" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Agency FB Bold" size="38.0" />
          </font>
@@ -191,6 +191,11 @@
       <ImageView fx:id="coeur7" fitHeight="56.0" fitWidth="40.0" layoutX="1088.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/coeur.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="teteCasque" fitHeight="370.0" fitWidth="312.0" layoutX="819.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/teteCasque.png" />
          </image>
       </ImageView>
    </children>

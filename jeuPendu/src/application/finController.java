@@ -11,10 +11,17 @@ public class finController extends ButtonController{
 	private String motMystere = jeu.getMotMystere();
 	@FXML Label labelMotMystere;
 	@FXML Label labelMessageFin;
+	@FXML Label labelFin1;
+	@FXML Label labelFin2;
+
+
 	
 	
 	@FXML public void initialize() {
-	
+		labelMessageFin.setStyle("-fx-font-size :"+Integer.toString(34+super.getGestionOption().getMultPolice()) + " Arial;");
+		labelFin1.setStyle("-fx-font-size :"+Integer.toString(37+super.getGestionOption().getMultPolice()) + " Arial;");
+		labelFin2.setStyle("-fx-font-size :"+Integer.toString(23+super.getGestionOption().getMultPolice()) + " Arial;");
+		labelMotMystere.setStyle("-fx-font-size :"+Integer.toString(36+super.getGestionOption().getMultPolice()) + " Arial;");
 		labelMotMystere.setText(motMystere);
 		if(jeu.MaxErreursDepasse())
 			if( getGestionOption().getTheme() == Theme.FUTURISTE)
