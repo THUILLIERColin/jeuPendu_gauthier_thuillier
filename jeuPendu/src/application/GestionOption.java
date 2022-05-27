@@ -96,7 +96,7 @@ public class GestionOption{
 	public Background MAJSupportWestern() {
 		// mettre les backgrounds a jour en futuriste
 		
-		BackgroundImage backFutur= new BackgroundImage(new Image("images/supportWestern.png",484,614.5,false,true),
+		BackgroundImage backFutur= new BackgroundImage(new Image("images/supportWestern.png",600,614.5,false,true),
 		        BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
 		          BackgroundSize.DEFAULT);
 		return new Background(backFutur);
