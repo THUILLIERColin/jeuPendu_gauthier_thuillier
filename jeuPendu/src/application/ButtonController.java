@@ -55,8 +55,12 @@ public class ButtonController {
 		root = loader.load();
 		
 		// Background
-		if(option.getTheme()==Theme.FUTURISTE) root.setBackground(option.MAJEnJeuFuturiste());
-		else root.setBackground(option.MAJEnJeuWestern());
+		if(option.getTheme()==Theme.FUTURISTE) {
+			root.setBackground(option.MAJEnJeuFuturiste());
+		}
+		else {
+			root.setBackground(option.MAJEnJeuWestern());
+		}
 				
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root,1300,700);

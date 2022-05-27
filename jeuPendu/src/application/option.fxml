@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
@@ -11,7 +12,10 @@
 
 <AnchorPane prefHeight="524.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="34.0" fitWidth="251.0" layoutX="51.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="34.0" fitWidth="251.0" layoutX="51.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/optionWestern_Titre.png" />
+         </image></ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0d1d18c" height="366.0" layoutX="58.0" layoutY="94.0" stroke="#ffffff00" strokeType="INSIDE" width="726.0" />
       <Label fx:id="labelOption1" alignment="CENTER" layoutX="63.0" layoutY="100.0" prefHeight="76.0" prefWidth="323.0" text="Taille de la police " textAlignment="CENTER">
          <font>

@@ -159,7 +159,7 @@ public class enJeuController extends ButtonController{
 		super(jeu, option);
 	}
 	
-	public void handleButtonKeybord(ActionEvent event) {
+	public void handleButtonKeybord(ActionEvent event){
 		
 	    String lettre =((Button) event.getSource()).getId().toUpperCase();
 	        	
@@ -200,7 +200,7 @@ public class enJeuController extends ButtonController{
 	       
 		        if(jeu.MaxErreursDepasse()||jeu.ToutTrouve()){
 		        	try {
-						fin(event);
+		  				fin(event);
 					} catch (IOException e) {
 				
 						e.printStackTrace();

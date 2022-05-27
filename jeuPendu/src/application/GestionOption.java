@@ -66,6 +66,42 @@ public class GestionOption{
 		return new Background(backFutur);
 	}
 	
+	public Background MAJOptionFuturiste() {
+		// mettre les backgrounds a jour en futuriste
+		
+		BackgroundImage backFutur= new BackgroundImage(new Image("images/option_aideFutur.png",1000,614.5,false,true),
+		        BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+		          BackgroundSize.DEFAULT);
+		return new Background(backFutur);
+	}
+	
+	public Background MAJOptionWestern() {
+		// mettre les backgrounds a jour en futuriste
+		
+		BackgroundImage backFutur= new BackgroundImage(new Image("images/optionWestern.png",1000,614.5,false,true),
+		        BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+		          BackgroundSize.DEFAULT);
+		return new Background(backFutur);
+	}
+	
+	public Background MAJSupportFuturiste() {
+		// mettre les backgrounds a jour en futuriste
+		
+		BackgroundImage backFutur= new BackgroundImage(new Image("images/option_aideFutur.png",1000,614.5,false,true),
+		        BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+		          BackgroundSize.DEFAULT);
+		return new Background(backFutur);
+	}
+	
+	public Background MAJSupportWestern() {
+		// mettre les backgrounds a jour en futuriste
+		
+		BackgroundImage backFutur= new BackgroundImage(new Image("images/supportWestern.png",484,614.5,false,true),
+		        BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+		          BackgroundSize.DEFAULT);
+		return new Background(backFutur);
+	}
+	
 	public Background MAJEnJeuFuturiste() {
 		// mettre les backgrounds a jour en futuriste
 		
