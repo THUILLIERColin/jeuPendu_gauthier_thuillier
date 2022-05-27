@@ -49,6 +49,7 @@ public class IntroductionController extends ButtonController {
 	}
 	
 	@FXML public void setIntroLabel(int multPolice) {
+		
 		labelIntro1.setStyle("-fx-font-size :"+Integer.toString(54+multPolice) + " Arial;");
 		labelIntro2.setStyle("-fx-font-size :"+Integer.toString(54+multPolice) + " Arial;");
 		labelIntro3.setStyle("-fx-font-size :"+Integer.toString(71+multPolice) + " Arial;");
@@ -65,8 +66,12 @@ public class IntroductionController extends ButtonController {
         loader.setController(optionController);
         AnchorPane fondOption = loader.load(); 
         
-        if(option.getTheme()==Theme.WESTERN) fondOption.setBackground(option.MAJOptionWestern());
-        else fondOption.setBackground(option.MAJOptionFuturiste());
+        if(option.getTheme()==Theme.WESTERN) {
+        	fondOption.setBackground(option.MAJOptionWestern());
+        }
+        else {
+        	fondOption.setBackground(option.MAJOptionFuturiste());
+        }
         
         Dialog<ButtonType> dialog = new Dialog<ButtonType>();
         dialog.setTitle("Support");      
@@ -86,7 +91,7 @@ public class IntroductionController extends ButtonController {
 			//Choix du theme 
 			if(!(optionController.getThemeChoisi()==option.getTheme())){
 				option.setTheme(optionController.getThemeChoisi());
-				option.MAJIntro(optionController.getThemeChoisi());
+				option.MAJIntro(optionController.getThemeChoisi(),labelIntro1);
 			}			
 			
 			// Choix du dico

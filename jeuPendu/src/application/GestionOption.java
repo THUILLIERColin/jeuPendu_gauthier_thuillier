@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 
 import application.Main.Theme;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
@@ -139,11 +140,18 @@ public class GestionOption{
 	}
 	
 	
-	public void MAJIntro(Theme theme) {
-		if(theme==Theme.WESTERN)
+	public void MAJIntro(Theme theme, Label labelIntro1) {
+		if(theme==Theme.WESTERN) {
 			root.setBackground(MAJAccueilWestern());
-		else 
+			labelIntro1.setStyle("-fx-text-inner-color: black;");
+			
+		}
+		else {
 			root.setBackground(MAJAccueilFuturiste());
+			labelIntro1.setStyle("-fx-text-inner-color: white;");
+		}
+			
+		
 		
 	}
 }
