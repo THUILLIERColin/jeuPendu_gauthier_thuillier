@@ -17,8 +17,8 @@
             <Font name="Agency FB Bold" size="27.0" />
          </font>
       </Label>
-      <Button fx:id="a" layoutX="374.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="A" />
-      <Button fx:id="b" layoutX="403.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="B" />
+      <Button fx:id="a" layoutX="287.0" layoutY="423.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="A" />
+      <Button fx:id="b" layoutX="342.0" layoutY="423.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="B" />
       <ImageView fx:id="corde" fitHeight="239.0" fitWidth="400.0" layoutX="856.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/corde.png" />
@@ -54,30 +54,30 @@
             <Image url="@../images/brasD.png" />
          </image>
       </ImageView>
-      <Button fx:id="c" layoutX="436.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="C" />
-      <Button fx:id="d" layoutX="462.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="D" />
-      <Button fx:id="e" layoutX="498.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="E" />
-      <Button fx:id="f" layoutX="527.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="F" />
-      <Button fx:id="g" layoutX="562.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="G" />
-      <Button fx:id="h" layoutX="592.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="H" />
-      <Button fx:id="i" layoutX="357.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="I" />
-      <Button fx:id="j" layoutX="391.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="J" />
-      <Button fx:id="k" layoutX="419.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="K" />
-      <Button fx:id="l" layoutX="453.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="L" />
-      <Button fx:id="m" layoutX="481.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="M" />
-      <Button fx:id="n" layoutX="515.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="N" />
-      <Button fx:id="o" layoutX="549.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="O" />
-      <Button fx:id="p" layoutX="593.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="P" />
-      <Button fx:id="q" layoutX="621.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Q" />
-      <Button fx:id="r" layoutX="380.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="R" />
-      <Button fx:id="s" layoutX="414.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="S" />
-      <Button fx:id="t" layoutX="448.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="T" />
-      <Button fx:id="u" layoutX="481.0" layoutY="484.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="U" />
-      <Button fx:id="v" layoutX="515.0" layoutY="484.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="V" />
-      <Button fx:id="w" layoutX="547.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="W" />
-      <Button layoutX="581.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="X" fx:id="x" />
-      <Button fx:id="y" layoutX="611.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Y" />
-      <Button fx:id="z" layoutX="645.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonKeybord" text="Z" />
+      <Button fx:id="c" layoutX="397.0" layoutY="423.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="C" />
+      <Button fx:id="d" layoutX="451.0" layoutY="423.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="D" />
+      <Button fx:id="e" layoutX="500.0" layoutY="423.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="E" />
+      <Button fx:id="f" layoutX="553.0" layoutY="423.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="F" />
+      <Button fx:id="g" layoutX="604.0" layoutY="423.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="G" />
+      <Button fx:id="h" layoutX="654.0" layoutY="423.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="H" />
+      <Button fx:id="i" layoutX="256.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="I" />
+      <Button fx:id="j" layoutX="311.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="J" />
+      <Button fx:id="k" layoutX="366.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="K" />
+      <Button fx:id="l" layoutX="423.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="L" />
+      <Button fx:id="m" layoutX="480.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="M" />
+      <Button fx:id="n" layoutX="533.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="N" />
+      <Button fx:id="o" layoutX="583.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="O" />
+      <Button fx:id="p" layoutX="685.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="P" />
+      <Button fx:id="q" layoutX="633.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="Q" />
+      <Button fx:id="r" layoutX="266.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="R" />
+      <Button fx:id="s" layoutX="314.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="S" />
+      <Button fx:id="t" layoutX="364.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="T" />
+      <Button fx:id="u" layoutX="417.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="U" />
+      <Button fx:id="v" layoutX="467.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="V" />
+      <Button fx:id="w" layoutX="518.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="W" />
+      <Button layoutX="571.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="X" fx:id="x" />
+      <Button fx:id="y" layoutX="622.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="Y" />
+      <Button fx:id="z" layoutX="675.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleButtonKeybord" prefHeight="40.0" prefWidth="40.0" text="Z" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="33.0" layoutX="847.0" layoutY="506.0" stroke="BLACK" strokeType="INSIDE" width="288.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="312.0" layoutX="1068.0" layoutY="196.0" stroke="BLACK" strokeType="INSIDE" width="27.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96662e" height="16.0" layoutX="872.0" layoutY="188.0" stroke="BLACK" strokeType="INSIDE" width="239.0" />

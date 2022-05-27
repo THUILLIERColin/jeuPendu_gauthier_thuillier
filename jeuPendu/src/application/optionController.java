@@ -39,6 +39,7 @@ public class optionController extends ButtonController{
 		// Theme box
 		
 		slider.setValue(super.getGestionOption().getMultPolice());
+		policeMult = super.getGestionOption().getMultPolice();
 		labelOption3.setStyle("-fx-font-size :"+Integer.toString(21+super.getGestionOption().getMultPolice()) + " Arial;");
 		labelOption2.setStyle("-fx-font-size :"+Integer.toString(21+super.getGestionOption().getMultPolice()) + " Arial;");
 		labelOption1.setStyle("-fx-font-size :"+Integer.toString(21+super.getGestionOption().getMultPolice()) + " Arial;");
