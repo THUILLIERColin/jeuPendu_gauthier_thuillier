@@ -108,5 +108,6 @@ public class GestionOption{
 			root.setBackground(MAJAccueilWestern());
 		else 
 			root.setBackground(MAJAccueilFuturiste());
+		
 	}
 }
