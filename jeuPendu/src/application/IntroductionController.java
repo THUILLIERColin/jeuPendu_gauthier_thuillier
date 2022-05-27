@@ -91,7 +91,7 @@ public class IntroductionController extends ButtonController {
 			//Choix du theme 
 			if(!(optionController.getThemeChoisi()==option.getTheme())){
 				option.setTheme(optionController.getThemeChoisi());
-				option.MAJIntro(optionController.getThemeChoisi(),labelIntro1);
+				option.MAJIntro(optionController.getThemeChoisi(),labelIntro1,labelIntro2);
 			}			
 			
 			// Choix du dico

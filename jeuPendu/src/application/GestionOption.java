@@ -11,6 +11,7 @@ import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 
 public class GestionOption{
 	
@@ -140,15 +141,19 @@ public class GestionOption{
 	}
 	
 	
-	public void MAJIntro(Theme theme, Label labelIntro1) {
+	public void MAJIntro(Theme theme, Label labelIntro1,Label labelIntro2) {
 		if(theme==Theme.WESTERN) {
 			root.setBackground(MAJAccueilWestern());
-			labelIntro1.setStyle("-fx-text-inner-color: black;");
+			labelIntro1.setTextFill(Color.BLACK);
+			labelIntro2.setTextFill(Color.BLACK);
+
 			
 		}
 		else {
 			root.setBackground(MAJAccueilFuturiste());
-			labelIntro1.setStyle("-fx-text-inner-color: white;");
+			labelIntro1.setTextFill(Color.WHITE);
+			labelIntro2.setTextFill(Color.WHITE);
+
 		}
 			
 		
