@@ -14,3 +14,7 @@ Le code du back-end est déjà fourni.
 
 Pour installer le projet, il suffit de cloner le dépôt git.
 D'imporer le projet dans Eclipse et de lancer le fichier Main.java.
+
+## Auteurs
+* **[THUILLIER Colin](https://github.com/THUILLIERColin)**
+* **[GAUTHIER Pierre](https://github.com/PierreGauthier57)**
